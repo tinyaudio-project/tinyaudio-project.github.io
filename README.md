@@ -13,15 +13,37 @@ assets/
   img/              # 放 teaser.png、方法图、og.png
 ```
 
-## 待替换的占位内容
+## 内容状态
 
-都在 `index.html` 里，搜 `goes here` / `placeholder` / `not added yet` 即可定位：
+已按 `Tinyaudio_icassp2027.pdf` 填好：标题、作者与三级单位、Abstract、At a glance、
+Fig. 1 / Fig. 2、Method 全文（TA-VAE / TA-CLAP / TA-DiT / SFT / MeanFlow / 训练设置）、
+结果三张表（footprint 与效率、AudioCaps、TTA-Bench）、主观评测表、Ablation 表、BibTeX。
 
-- `<h1>` 论文标题与副标题
-- `.authors` / `.affil` 作者与单位（作者名做成超链接指向个人主页）
-- `.links` 的 Paper / arXiv / Code 链接，把 `href="#"` 换成真实地址
-- `<meta name="citation_*">` 与 `og:*`，影响 Google Scholar 抓取和分享预览
-- Abstract 段落、Figure 1、Citation 的 BibTeX
+**还差的只有两处**，都标在页面上：
+
+- `.links` 里的 `Paper (soon)` —— 等 arXiv 上线后换成真实链接，同时把
+  `<meta name="citation_pdf_url">` 和 `og:url` 一并改掉
+- `#samples` 段的音频样本块
+
+另外作者名目前都是 `href="#"`，等有了主页地址再补。
+
+## 配图来源
+
+`assets/img/teaser.png`（Fig. 1，2929×1281）和 `assets/img/method.png`（Fig. 2，1452×725）
+直接从论文 PDF 里抠的，不是重画的：
+
+```bash
+python -c "
+from pypdf import PdfReader
+r = PdfReader('paper.pdf')
+for i, p in enumerate(r.pages, 1):
+    for j, im in enumerate(p.images):
+        open(f'p{i}_{j}.png', 'wb').write(im.data)
+"
+```
+
+`og.png` 是 1200×630 的分享预览卡，用 Pillow 照着标题和作者行生成的，改标题后要重跑一次。
+
 
 ## 加音频的规范
 

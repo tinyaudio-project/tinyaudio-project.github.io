@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en" data-page-node-id="AWHcVQYG6BAr7mDML5rTVP">
+<head data-page-node-id="LZCbBgvGzyZt4Xfh8ARC3M">
+<meta charset="utf-8" data-page-node-id="GvsPJyqgfcjkH6EbQJK3SP">
+<meta name="viewport" content="width=device-width, initial-scale=1" data-page-node-id="djksYJnYFnCH4awC65CNmT">
 
-<title>TinyAudio</title>
-<meta name="description" content="Project page for TinyAudio.">
+<title>TinyAudio: Compact and Efficient Text-to-Audio Generation for Low-Resource Deployment</title>
+<meta name="description" content="TinyAudio is an 87M-parameter flow-matching text-to-audio model for low-resource deployment, with an audio-aligned text encoder, a single-stream DiT backbone, and a compact audio VAE. TinyAudio-MF enables one-step generation at an RTF of 0.715 on four CPU cores." data-page-node-id="XMb7LNbLbA3xzI3U1pA6mG">
 
-<meta name="citation_title" content="TinyAudio">
-<meta name="citation_author" content="Author One">
-<meta name="citation_publication_date" content="2026">
-<meta name="citation_pdf_url" content="#">
+<meta name="citation_title" content="TinyAudio: Compact and Efficient Text-to-Audio Generation for Low-Resource Deployment" data-page-node-id="vuaAEJIikPmokick4dDNBO">
+<meta name="citation_author" content="Liu, Junxi" data-page-node-id="IVaCEcTHyZPKEOiDNOFsJc">
+<meta name="citation_author" content="Li, Xiquan" data-page-node-id="nO5QGEPEoIXbvk7IsYW09k">
+<meta name="citation_author" content="Guan, Wenhao" data-page-node-id="boxppgNhlVxvsFw4ABn3j9">
+<meta name="citation_author" content="Duan, Yifan" data-page-node-id="NgB3J2DhmXWmbaWqCpJlBs">
+<meta name="citation_author" content="Niu, Zhikang" data-page-node-id="9uKYnPe9x3NFzBSCUtBPFl">
+<meta name="citation_author" content="Ma, Ziyang" data-page-node-id="x2JDo2RPhCnYOTJqRE8USA">
+<meta name="citation_author" content="Chen, Xie" data-page-node-id="qIAI5b8cMfAhAE6FCc0KBx">
+<meta name="citation_publication_date" content="2027" data-page-node-id="wGvhkfz9MzvuiMGDfyuD5K">
+<meta name="citation_conference_title" content="IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)" data-page-node-id="W4zMPCqs7gkBZotu4hE461">
+<meta name="citation_pdf_url" content="#" data-page-node-id="qWkg1cCJdKgrK1ljqIsW0y">
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="TinyAudio">
-<meta property="og:description" content="Project page for TinyAudio.">
-<meta property="og:image" content="assets/img/og.png">
+<meta property="og:type" content="website" data-page-node-id="73oHAkmBY9knBlTyx5z898">
+<meta property="og:title" content="TinyAudio: Compact and Efficient Text-to-Audio Generation for Low-Resource Deployment" data-page-node-id="ZQsFtKOx2Wd6BjFs3rDpOo">
+<meta property="og:description" content="87M-parameter flow-matching text-to-audio generation, 0.48 GB peak GPU memory, 0.715 RTF on four CPU cores." data-page-node-id="05iV3O4BXF00AsmIwmcNab">
+<meta property="og:image" content="assets/img/og.png" data-page-node-id="UK5XfQ17z5fULWkuMl6SsB">
+<meta name="twitter:card" content="summary_large_image" data-page-node-id="u2CvLo0BP5reC9SJjSFni5">
 
 <style>
 :root {
@@ -48,83 +56,362 @@ body {
   font-weight: 400;
 }
 .wrap { max-width: 720px; margin: 0 auto; padding: 96px 24px 120px; }
-h1 { font-size: 27px; font-weight: 500; line-height: 1.35; letter-spacing: -0.01em; margin: 0 0 20px; }
-h2 { font-size: 14px; font-weight: 500; margin: 0 0 18px; }
+h1 { font-size: 26px; font-weight: 500; line-height: 1.4; letter-spacing: -0.01em; margin: 0 0 26px; }
+h2 { font-size: 14px; font-weight: 500; margin: 0 0 20px; }
+h3 { font-size: 14px; font-weight: 500; margin: 30px 0 8px; }
 p { margin: 0 0 16px; }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
+sup { font-size: 10px; vertical-align: super; line-height: 0; }
 .muted { color: var(--fg3); }
-.authors { font-size: 15px; color: var(--fg2); margin: 0 0 6px; }
-.affil { font-size: 13px; color: var(--fg3); margin: 0 0 26px; }
-.links { font-size: 14px; color: var(--fg3); margin: 0 0 4px; }
-.links span { margin: 0 8px; color: var(--line); }
-section { border-top: 1px solid var(--line); padding-top: 34px; margin-top: 56px; }
+.authors { font-size: 15px; color: var(--fg2); margin: 0 0 8px; }
+.authors a { color: var(--fg2); }
+.affil { font-size: 12.5px; color: var(--fg3); margin: 0; line-height: 1.85; }
+.meta { font-size: 12.5px; color: var(--fg3); margin-top: 22px; }
+.links { font-size: 14px; margin: 22px 0 0; }
+.links span { margin: 0 9px; color: var(--line); }
+section { border-top: 1px solid var(--line); padding-top: 34px; margin-top: 54px; }
 .abstract { color: var(--fg2); }
-.slot {
-  display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
-  border: 1px dashed var(--line); border-radius: 6px;
-  padding: 14px 16px; margin-bottom: 10px;
-  font-size: 13px; color: var(--fg3);
-}
-.slot b { font-weight: 400; color: var(--fg2); }
+figure { margin: 6px 0 0; }
+figure img { width: 100%; display: block; }
+figcaption { font-size: 12px; color: var(--fg3); margin-top: 12px; line-height: 1.7; }
+.table-title { font-size: 12.5px; color: var(--fg3); margin: 26px 0 8px; }
+.table-title:first-of-type { margin-top: 0; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; font-variant-numeric: tabular-nums; }
+caption { text-align: left; font-size: 12px; color: var(--fg3); padding-bottom: 8px; }
+th { font-weight: 400; color: var(--fg3); text-align: right; padding: 7px 5px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+td { text-align: right; padding: 7px 5px; border-bottom: 1px solid var(--line); color: var(--fg2); white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+tr.ours td { color: var(--fg); font-weight: 500; }
 pre {
   margin: 0; padding: 18px 20px; overflow-x: auto;
   border: 1px solid var(--line); border-radius: 6px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 12px; line-height: 1.7; color: var(--fg2);
 }
-footer { border-top: 1px solid var(--line); margin-top: 56px; padding-top: 34px; font-size: 13px; color: var(--fg3); }
+.slot {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+  border: 1px dashed var(--line); border-radius: 6px;
+  padding: 13px 16px; margin-bottom: 10px;
+  font-size: 13px; color: var(--fg3);
+}
+.slot b { font-weight: 400; color: var(--fg2); }
+footer { border-top: 1px solid var(--line); margin-top: 54px; padding-top: 30px; font-size: 12.5px; color: var(--fg3); }
 </style>
 </head>
 
-<body>
-<div class="wrap">
+<body data-page-node-id="0JYps4KHUOpEA8lOE1K90q">
+<div class="wrap" data-page-node-id="pvbMRVd0EkpA3kRcNuq78r">
 
-<h1>TinyAudio: <span class="muted">paper subtitle goes here</span></h1>
+<h1 data-page-node-id="P9l95WHP6IMKuDpcQwVuty">TinyAudio: Compact and Efficient Text-to-Audio Generation for Low-Resource Deployment</h1>
 
-<p class="authors">
-  <a href="#">Author One</a>, <a href="#">Author Two</a>, <a href="#">Author Three</a>
-</p>
-<p class="affil">Affiliation One &middot; Affiliation Two</p>
-
-<p class="links">
-  <a href="#">Paper</a><span>|</span>
-  <a href="#">arXiv</a><span>|</span>
-  <a href="#">Code</a><span>|</span>
-  <a href="#samples">Audio samples</a>
+<p class="authors" data-page-node-id="vfug7LkzZtCWXDJyxCAWYI">
+  <a href="#" data-page-node-id="FV6qo5yZVKd5VLvQws054b">Junxi Liu</a><sup data-page-node-id="2xwHVGqdodEa4J1uqwvaF6">1,3</sup>,
+  <a href="#" data-page-node-id="ivQKkJVNfp3SG0I21nvdlw">Xiquan Li</a><sup data-page-node-id="E1397AtFwWAytwxiMBx89n">1</sup>,
+  <a href="#" data-page-node-id="HsZ7MkCXSysG4bppi8jI5w">Wenhao Guan</a><sup data-page-node-id="MSYqRfglQJGRasBVOMWKMT">2</sup>,
+  <a href="#" data-page-node-id="sbZmi94XFj3WNRHMtfwZ6Y">Yifan Duan</a><sup data-page-node-id="bku65M2f9kITG1TkK6Uo8S">1,2</sup>,
+  <a href="#" data-page-node-id="D1cV8XGwGHYG3L0HHVOhys">Zhikang Niu</a><sup data-page-node-id="7FuIIk4m8cP6EdR7RVRCaE">1,2</sup>,
+  <a href="#" data-page-node-id="Jik1Cq1lRxSJ4lR7tRHONi">Ziyang Ma</a><sup data-page-node-id="ZUDjo7oPpJS3Vh4flknVfB">1,2</sup>,
+  <a href="#" data-page-node-id="mM8ij33dhBwLymnghkVDUX">Xie Chen</a><sup data-page-node-id="V1BgUmGI3KwbhN2hanA9sg">1,2</sup>
 </p>
 
-<section>
-  <h2>Abstract</h2>
-  <p class="abstract">
-    Abstract placeholder. Replace this paragraph with the paper abstract.
+<p class="affil" data-page-node-id="aaeM4ZARtXlT9tPDLBc0H1">
+  <sup data-page-node-id="Cy7rouwTgm4e4SX1CVXgNw">1</sup>X-LANCE Lab, Department of Computer Science and Engineering, Shanghai Jiao Tong University, China<br data-page-node-id="mEHxsGNoc76fKJxnRszmP1">
+  <sup data-page-node-id="BiB7w3KgGpDHRxtO6E4VE4">2</sup>Shanghai Innovation Institute, China<br data-page-node-id="1yWOmGvzvhmtfoPcqw75OG">
+  <sup data-page-node-id="E7VmVqf3LOwaLqUJywSwIu">3</sup>University of Electronic Science and Technology of China, China
+</p>
+
+<p class="links" data-page-node-id="9qEcEDNDqQoT0yssukQY4j">
+  <span class="muted" data-page-node-id="2fKqNLuoAo8c7ddGAu8GQO">Paper (soon)</span><span data-page-node-id="soR9QEkw6SCuCPyiGfjVpM">|</span>
+  <a href="https://github.com/junxi25liu/TinyAudio" data-page-node-id="DXESurqE7SD78THM5woSeP">Code</a><span data-page-node-id="HMc7F2JcNu0BOyh7Asv7w2">|</span>
+  <a href="#samples" data-page-node-id="vpqYrGtqXuNdg5B5wjkzxN">Audio samples</a><span data-page-node-id="Ru5bfwL7tumJbAMKUvuQ6p">|</span>
+  <a href="#citation" data-page-node-id="KAGHHBJbamGuPDvG2fVI5x">BibTeX</a>
+</p>
+
+<section data-page-node-id="np85NDdLA3RRA3DXWZ4IUE">
+  <h2 data-page-node-id="P2SAfN6GuJAqowFigYiMvZ">Abstract</h2>
+  <p class="abstract" data-page-node-id="qcdVDLskTRcTTWlPNHqBv9">
+    Text-to-audio (TTA) generation has advanced rapidly in generation quality and instruction
+    following. However, representative systems often require around a billion parameters, limiting
+    deployment on resource-constrained devices. This paper introduces TinyAudio, a compact
+    flow-matching-based TTA model for low-resource deployment. To build TinyAudio, we introduce
+    three compact components: TA-CLAP, a 32M audio-aligned text encoder; TA-DiT, a 35M
+    single-stream flow-matching Transformer; and TA-VAE, whose 20M decoder reconstructs 44.1 kHz
+    audio from 1024&times; compressed latents. TinyAudio has only 87M parameters in total, over 90%
+    fewer than representative billion-parameter pipelines, and uses 0.48 GB peak GPU memory. On
+    AudioCaps, TinyAudio achieves an FAD of 2.65 while retaining competitive results on TTA-Bench.
+    We further propose TinyAudio-MF, a MeanFlow-accelerated model that enables one-step generation
+    and achieves a real-time factor of 0.715 using four CPU cores. These results demonstrate a
+    practical quality&ndash;footprint trade-off for low-resource TTA deployment.
   </p>
 </section>
 
-<section>
-  <h2>Overview</h2>
-  <div class="slot"><b>Figure 1</b><em>assets/img/teaser.png &mdash; not added yet</em></div>
+<section data-page-node-id="S4UKpTCzLTyWfebZvMZxJ3">
+  <h2 data-page-node-id="WHlcg4aUO3Y0EDgxikxcKE">At a glance</h2>
+  <table data-page-node-id="laZb1pvi6y98cccEJIbhfD">
+    <tbody data-page-node-id="ya9kGC0le8v0fEkf1yUREV">
+      <tr data-page-node-id="al5evxtmIzlJEgsA2VidVA"><td data-page-node-id="FOS3zTllJMYAedzzRpMvxy">Total parameters</td><td data-page-node-id="OeQ0EYBsLkbStVCDc3cLTL">87M (35M generator)</td></tr>
+      <tr data-page-node-id="4SBi13PHPfopyH3jYnbrhg"><td data-page-node-id="A7d6HRlFkb90OhuvMsuwAm">Peak GPU memory at inference</td><td data-page-node-id="Zf7at3q7QaV4oJFbV3gJSe">0.48 GB (FP32, batch size 1)</td></tr>
+      <tr data-page-node-id="FFAiZzROVVtZhEG8pwqejE"><td data-page-node-id="zIsiRyHKrEEJMDfiw0ZQtR">AudioCaps FAD</td><td data-page-node-id="ipWBS39OpWHqB2rIxfJVa7">2.65</td></tr>
+      <tr data-page-node-id="z2FgxxJbf6TgBbahPHVFVh"><td data-page-node-id="H5yCeg5iIj1jePPBXOvWzL">Sampling</td><td data-page-node-id="BvdyRCKZwS8xTZYKbpG199">25-step Euler &rarr; 1 step (TinyAudio-MF)</td></tr>
+      <tr data-page-node-id="yBTCr4GhZIWDt6bvvSEpDj"><td data-page-node-id="V6nt38rZjJxkQwzZbw8lRV">End-to-end RTF, four CPU cores</td><td data-page-node-id="UtcHCikoGGhn6qhoByYMSU">0.715 (TinyAudio-MF)</td></tr>
+    </tbody>
+  </table>
 </section>
 
-<section id="samples">
-  <h2>Audio samples</h2>
-  <div class="slot"><b>01</b><em>assets/audio/01.mp3 &mdash; not added yet</em></div>
-  <div class="slot"><b>02</b><em>assets/audio/02.mp3 &mdash; not added yet</em></div>
-  <div class="slot"><b>03</b><em>assets/audio/03.mp3 &mdash; not added yet</em></div>
+<section data-page-node-id="HPzAGbuYk07TFIhMW7iVEY">
+  <h2 data-page-node-id="sHlfHYC3qXT5PGO9nm9gH6">Overview</h2>
+  <figure data-page-node-id="liebCrUVNo8ACuQUjNEB5G">
+    <img src="assets/img/teaser.png" alt="Fréchet distance versus generator parameter count for text-to-audio systems" data-page-node-id="2yOonos9GOnMiPXsVQAXSc">
+    <figcaption data-page-node-id="zeU9JEkbjiYh0aSuNIxKev">
+      AudioCaps quality versus generator size. Bubble labels indicate generator parameters, and lower
+      FD is better. TinyAudio operates in a substantially smaller parameter regime while retaining
+      competitive distributional quality.
+    </figcaption>
+  </figure>
 </section>
 
-<section>
-  <h2>Citation</h2>
-<pre>@inproceedings{tinyaudio2026,
-  title     = {TinyAudio},
-  author    = {Author One and Author Two},
-  booktitle = {ICASSP},
-  year      = {2026}
+<section data-page-node-id="AmvGmh3yzSHMo00lbcfa4Z">
+  <h2 data-page-node-id="ukv7Ughh2lNfjPHvCEeNxh">Method</h2>
+
+  <p data-page-node-id="KuxHFGHsplP63IJnr8XldW">
+    TinyAudio comprises three online modules. A 32M-parameter text encoder from TA-CLAP maps the
+    input prompt to audio-aware representations, a 35M-parameter TA-DiT generates continuous audio
+    latents, and a 20M-parameter TA-VAE decoder reconstructs 44.1 kHz waveforms. Together with
+    lightweight projection layers, TinyAudio contains 87M parameters in total.
+  </p>
+
+  <figure data-page-node-id="amcwEPDShTDpwhCIdfUTUz">
+    <img src="assets/img/method.png" alt="Single-stream TA-DiT with layer-shared conditional modulation" data-page-node-id="t0gppXPm0kXlMltwC8D2MV">
+    <figcaption data-page-node-id="rS40hk9Ahd4kEYCxfTgcpe">
+      Single-stream TA-DiT. Projected text tokens and noised audio latents are concatenated for joint
+      self-attention. The right panel shows layer-shared conditional modulation: shared MLPs combine
+      text, timestep, and block embeddings to produce shift&ndash;scale and gate parameters. Only
+      audio tokens predict latent velocity.
+    </figcaption>
+  </figure>
+
+  <h3 data-page-node-id="nrZ5ODUCYLMgSxtwn495h3">TA-VAE: compact audio latent representation</h3>
+  <p data-page-node-id="MyLe7e0XMY1cytreNpIC7g">
+    TinyAudio operates in the compact continuous latent space of TA-VAE. Following SemanticVAE,
+    TA-VAE combines a DAC-style convolutional encoder with a lightweight decoder built from
+    anti-aliased multi-periodicity (AMP) blocks. The autoencoder applies a temporal compression
+    factor of 1024&times; to 44.1 kHz waveforms, producing a 64-channel latent sequence. During
+    training, the 7M-parameter encoder produces normalized latent targets; at inference, TA-VAE
+    retains only its approximately 20M-parameter decoder to reconstruct waveforms from generated
+    latents.
+  </p>
+
+  <h3 data-page-node-id="NDOHQSqcZZlOKEPjXX8k4Y">TA-CLAP: a lightweight audio-aligned text encoder</h3>
+  <p data-page-node-id="TcrVSzCaXYxFszPyrQdxOV">
+    High-performing TTA systems commonly rely on text encoders with hundreds of millions of
+    parameters, whereas TinyAudio employs a lightweight text encoder with only 32M parameters. Under
+    this capacity constraint, a generic language encoder may provide insufficient
+    acoustic-semantic representations. TA-CLAP therefore adapts the lightweight text encoder to the
+    audio domain through audio&ndash;text contrastive learning. The text encoder is initialized from
+    Ettin-encoder-32m and paired with a pretrained HTSAT audio encoder in a dual-encoder
+    architecture, with lightweight projection heads mapping both branches into a shared contrastive
+    space. The branches are optimized with the pairwise sigmoid loss introduced in SigLIP. After
+    contrastive adaptation the audio branch is discarded, and only the text branch is retained for
+    deployment.
+  </p>
+
+  <h3 data-page-node-id="AgmkXQJ9wMv78X6BkIy5hi">TA-DiT: lightweight single-stream generation Transformer</h3>
+  <p data-page-node-id="bFV91Bpt6RmmafTDiQdNzC">
+    TA-DiT removes two sources of repeated parameters in text-conditioned generative Transformers:
+    separate modality-fusion modules and block-specific conditional modulation networks. Projected
+    text tokens and noised audio latents are concatenated into a single joint sequence and processed
+    by the same self-attention parameters, so one parameter set models both intra-modal dependencies
+    and cross-modal interactions. Audio and text tokens receive independently indexed rotary
+    position embeddings, only audio-token outputs are projected into latent-velocity predictions, and
+    QK-Norm is used to stabilize training. DiT-style architectures typically use a separate AdaLN
+    modulation network in each block; TA-DiT instead shares conditional modulation networks across
+    all blocks while keeping lightweight block-specific embeddings, which separates shared condition
+    processing from depth-specific behavior. TA-DiT uses 18 Transformer blocks with a hidden size of
+    384 and 8 attention heads.
+  </p>
+
+  <h3 data-page-node-id="V7owOXWhW5bpjW30PBjXB3">Quality-aware supervised fine-tuning</h3>
+  <p data-page-node-id="J6VnWZkaT9qj5KPUqFSRrL">
+    SFT provides quality-aware and balanced supervision through perceptual-quality filtering, domain
+    balancing, and audio&ndash;text alignment ranking. From approximately 3.7M audio&ndash;text
+    records spanning music, speech, and general sounds, samples with low perceptual quality are
+    removed using AudioBox Aesthetics, a pretrained HTSAT classifier assigns AudioSet categories, and
+    sampling is balanced across the three domains with category-level quotas. Within each quota,
+    samples with higher LAION-CLAP similarity are prioritized. After duration filtering and
+    audio-level deduplication, the pipeline yields approximately 417K pairs used to fine-tune TA-DiT.
+  </p>
+
+  <h3 data-page-node-id="CpC7lUiYstD6gHhzKyNNIG">MeanFlow one-step acceleration</h3>
+  <p data-page-node-id="CTdCkCF9wu2EGi9Pu0FjPu">
+    Standard TinyAudio uses a 25-step Euler solver. TinyAudio-MF is initialized from the pretrained
+    TinyAudio checkpoint and continues training on the quality-aware SFT subset with the standard SFT
+    optimization settings and the Improved Mean Flows objective, reducing sampling to a single
+    function evaluation without changing the architecture or parameter count.
+  </p>
+
+  <h3 data-page-node-id="0sL4TavFZBfHluXAgrsFXx">Training and evaluation setup</h3>
+  <p data-page-node-id="8yUUkSvvuqCk9rAXQ4GMcb">
+    The base training corpus contains approximately 3.7M audio&ndash;text pairs from AudioCaps,
+    AudioSet, Clotho, VGGSound, WavCaps, MusicCaps, and AudioStock; AudioCaps validation and test
+    audio are excluded from both pretraining and SFT. The base generator is trained for 500K steps
+    followed by 200K SFT steps with a global batch size of 1024, and TA-CLAP remains frozen
+    throughout generator training. We evaluate 10-second generations on the AudioCaps test set and
+    report generation quality and audio&ndash;text alignment on the Accuracy subset of TTA-Bench,
+    which contains 1,500 prompts spanning multiple sound events and parallel, sequential, and more
+    complex temporal relations.
+  </p>
+</section>
+
+<section data-page-node-id="tHWBMKX5EqmOdLofd14QOL">
+  <h2 data-page-node-id="VuO1hEvjKisqlp5JCnKYYt">Results</h2>
+
+  <p class="table-title" data-page-node-id="2fYVB5jZnbWjDz3jh0hcQE">Footprint and inference efficiency</p>
+  <table data-page-node-id="XwgrlBVpsqFbmlmfqV2Nto">
+    <thead data-page-node-id="J9xeMGEeJYenjt8Z2BCGYK">
+      <tr data-page-node-id="QOpkQcmm5u7trg8H3rYFTV">
+        <th data-page-node-id="KuvuIpb5QN58GIXZpgEeET">Model</th><th data-page-node-id="oAHN3sEEg7AcSB8LY0dT9z">Gen.</th><th data-page-node-id="LWD5UhzYtpHBYH15HUIFdv">Deploy.</th><th data-page-node-id="Do2Bbnuub37KQb4gEv8NgY">Mem.</th><th data-page-node-id="Ro4gBO6MSMVy5CaxZ1yFjR">NFE</th><th data-page-node-id="UYA6KRfoiOMljGUxszUKgZ">RTF</th>
+      </tr>
+    </thead>
+    <tbody data-page-node-id="RYlcsuEzAPMvwGYiJA3HDN">
+      <tr data-page-node-id="bFx44gcCwXdQkCM0sPaCLE"><td data-page-node-id="6KwKp4DUs0WwQZYJXO7oDh">AudioLDM-L-Full</td><td data-page-node-id="tXbtEeBeKiQYYLNssICORj">739M</td><td data-page-node-id="Jo98k4x1YjlhsSZMm6cTQO">953M</td><td data-page-node-id="J4AyY0cmObK7JVQY1AoCEL">3.89 GB</td><td data-page-node-id="PXmEnn8sTN5YfHM0aqVIHO">200&times;2</td><td data-page-node-id="VS7YZiY2H4AaPpEMPCFg2v">1.190</td></tr>
+      <tr data-page-node-id="zE6Y8P0ZzsYs3HlkhiDgch"><td data-page-node-id="BphynIgCs2IbmuInZgrHPU">AudioLDM2-Large</td><td data-page-node-id="W4heut5e4z8QbEUQ7ZETGA">718M</td><td data-page-node-id="6VcbYPLS7HvCb9d2M8i5ZH">1467M</td><td data-page-node-id="pnsIcZIwV9dntZi633HjE1">5.93 GB</td><td data-page-node-id="Qhfkwk00VpmufAmIfW1zUD">200&times;2</td><td data-page-node-id="Cke5SUqHiwNw0uoeWmrYrO">4.173</td></tr>
+      <tr data-page-node-id="v8zN9VnVAQvPpkDGIZk8uo"><td data-page-node-id="XvVwXhGweC5NwHk0StNGGK">Tango-Full</td><td data-page-node-id="HVfCh8WmDM6uLocVWAFBZJ">866M</td><td data-page-node-id="zl06yNCH1hk8uKiIzjq4V1">1295M</td><td data-page-node-id="H8m4J9VM4QErTMdlaCG8tk">5.28 GB</td><td data-page-node-id="4FPyDGeidF4uL4qLfGp7ks">200&times;2</td><td data-page-node-id="H5O03e0KWcLCRYRLgyOSiO">1.880</td></tr>
+      <tr data-page-node-id="XTD5H6tbpZaAUSBrejgDJL"><td data-page-node-id="FfGGDmeVxWbEXyQcE5nL2g">Tango-2-Full</td><td data-page-node-id="ORlcJfXJcCAzfa3jSRHEQU">866M</td><td data-page-node-id="EfDU6sGlz1GOOW2h1IhUjQ">1295M</td><td data-page-node-id="UOFACAlKjFLBIi7ufhsFF2">5.28 GB</td><td data-page-node-id="ExqqZRaXUgqK9gbCUSZaNR">200&times;2</td><td data-page-node-id="Rt6p8Vpk7vIDFqqkWBRlMZ">1.879</td></tr>
+      <tr data-page-node-id="N3SJCq9i9oUC2cublnblab"><td data-page-node-id="dzrGCdqRojiqzn110qKzpq">MeanAudio-L-Full</td><td data-page-node-id="46N8iksIPloCUsdL4LZ8q7">480M</td><td data-page-node-id="FrdaiaPcMY6u0uBoDRbyq3">1032M</td><td data-page-node-id="HvFuNKs3X3yV5AHBAYOSCp">4.79 GB</td><td data-page-node-id="CTDp3hqkxodg21JC4hSaUy">25</td><td data-page-node-id="9xKP6rHDMKsMJuUrxasRU2">0.057</td></tr>
+      <tr data-page-node-id="41gtxUEU6tKcLYw3QmEUr7"><td data-page-node-id="sExU3J6FYxXlQutYSNjVJR">EzAudio-XL</td><td data-page-node-id="FQquEO81qNlgt7QVU4Sm2R">857M</td><td data-page-node-id="179msw6WTvqgCDubrMYmaG">2120M</td><td data-page-node-id="T6RFKqqDu2jCEVnWKOTkMx">8.61 GB</td><td data-page-node-id="lVfrXGxnZDyyeoOyzes8Dp">200&times;2</td><td data-page-node-id="UqIS8IX4mUhs1qGODhAlhH">1.896</td></tr>
+      <tr data-page-node-id="I8XC1xtUAlSeKwiaEMCvqJ"><td data-page-node-id="lfxHW4J6feE6PK3sb65iUv">GenAU-L-Full</td><td data-page-node-id="nTfA6VsXyYUfOkkbUFaN8J">1253M</td><td data-page-node-id="63TQHlr09iCJfijptTMquz">2031M</td><td data-page-node-id="tOk9IrU4Gvsy4PD9QIDHBC">18.54 GB</td><td data-page-node-id="p5E4gpHmRzCLSm4M2BLmPA">200&times;2</td><td data-page-node-id="CWIOfchWPh0dfKSEQJV6E3">0.937</td></tr>
+      <tr data-page-node-id="K0vSofvJKCGvW01MLpuDJT"><td data-page-node-id="YdA6yUFqVtjMPGqcasgHaX">TangoFlux</td><td data-page-node-id="S47mtuHr9q9RBQB0RVOtru">516M</td><td data-page-node-id="LEuTTiTY1tTjse98KATqez">937M</td><td data-page-node-id="AdhI46xqFecvHI3wHiNOXT">6.99 GB</td><td data-page-node-id="EcCTKFaEFokQLk62o8CjQE">50&times;2</td><td data-page-node-id="JYBdy22VCZMO8EbYAgCOnw">0.257</td></tr>
+      <tr data-page-node-id="AOTZpaLZgmz3iN3tlcz9hW"><td data-page-node-id="gZSHL2XMHEBsrS1ucDLMdB">Resonate</td><td data-page-node-id="C5QFFNRXaEeTK9X6iWygZc">470M</td><td data-page-node-id="djVUS0kYoJ3Xjk3Wvq7ZFe">1108M</td><td data-page-node-id="ODmeFhFpIh0DogKyfU8PJG">5.13 GB</td><td data-page-node-id="PUQkQxLA7Fo21Yg7COt2zC">25&times;2</td><td data-page-node-id="n2M9dz8gd765gQ6QLAUgus">0.273</td></tr>
+      <tr class="ours" data-page-node-id="R1TqAiF6gdD09EbD182xxb"><td data-page-node-id="XlUqsEu71lnTqjpqO6u7Lh">TinyAudio</td><td data-page-node-id="K5XZjJoHGCCNxoRpO4IAeA">35M</td><td data-page-node-id="1FWCeTeziW5lmCPU3H7Qgv">87M</td><td data-page-node-id="zrzI9qtawCFzRTHrE594V1">0.48 GB</td><td data-page-node-id="VpgKIoeJ4eLABC9qoXL9If">25&times;2</td><td data-page-node-id="FZ5aFuZ7R95SIjotSmwm5z">0.078</td></tr>
+      <tr class="ours" data-page-node-id="sAJken83EhLbpPohtCAQI9"><td data-page-node-id="0rghNdEdB0RDqXAlfVCrqu">TinyAudio-MF</td><td data-page-node-id="IYnPxrxwUr4IhGv78OiDDB">35M</td><td data-page-node-id="GrXL3rItMdLo9bI335P4Rw">87M</td><td data-page-node-id="dxpVLMvQOA6WhU0XeHLbbm">0.48 GB</td><td data-page-node-id="eEfZnM807GzBrdsy6GGi5e">1</td><td data-page-node-id="FfXZ9YAvFtaW1lxR2TjcDA">0.010</td></tr>
+    </tbody>
+  </table>
+  <p class="table-title" data-page-node-id="0Q1Qv9iXjdwVxo3EpqFmfY">
+    Gen. and Deploy. denote generator and total inference-time parameter counts. Mem. is peak GPU
+    memory during inference; Mem. and RTF are measured on a single GPU in FP32 with batch size 1.
+    NFE counts function evaluations, where &times;2 indicates classifier-free guidance.
+  </p>
+
+  <p class="table-title" data-page-node-id="y5QGqAFOek9oJzdAGIFGhX">AudioCaps generation quality</p>
+  <table data-page-node-id="65pnNhHJlRL1PFYNmqovwZ">
+    <thead data-page-node-id="dPZTdZtuDuBDShhIEXxKD1">
+      <tr data-page-node-id="MavH3sF8xO8oB4D7bEZ7hP"><th data-page-node-id="FDRQAaJYPd5y3tAwpDSQ7P">Model</th><th data-page-node-id="wU6T9V6bW4xAFwiGPKrkrT">FAD &darr;</th><th data-page-node-id="j3HRMsumuLTPLnxDPqC7OC">FD &darr;</th><th data-page-node-id="2ufFTluTsLIKQoRvSpOh04">KL &darr;</th><th data-page-node-id="3cN8IlsIMfXwaMtcCBEHT0">IS &uarr;</th></tr>
+    </thead>
+    <tbody data-page-node-id="HD8B1G2Mpy6AUVTJsDA0GS">
+      <tr data-page-node-id="Fr5J7IUeEbEXfAaCFmpQch"><td data-page-node-id="qIQgwMiANdQHLC5yDT2JUN">AudioLDM-L-Full</td><td data-page-node-id="gGK9sNijUdeLDi2lT9GCWd">4.32</td><td data-page-node-id="Xz4ll7iROSdKMC3LcTWK8k">29.50</td><td data-page-node-id="UD34wfcxqDdfVYmURZGKfv">1.68</td><td data-page-node-id="LuqypL3OUbmHUN3mi6vvDI">8.17</td></tr>
+      <tr data-page-node-id="EeNwEhRaEmeRqpFrg6rIrd"><td data-page-node-id="FhJyrVQBCXxb0voOVlbaG9">AudioLDM2-Large</td><td data-page-node-id="b1YvKBpxPjNZMc5D9dXAd1">3.45</td><td data-page-node-id="Cs0XldGEsZR3Ss9YVQZQ1V">25.53</td><td data-page-node-id="amw46F3DhatlgSlfMSbYtR">1.65</td><td data-page-node-id="Ykdp6y7cDSYMJCT88kpHWI">7.98</td></tr>
+      <tr data-page-node-id="yYqdNM1forYBHv8hY8ushn"><td data-page-node-id="P4P9PYSyFo65jETiMFG6SZ">Tango-Full</td><td data-page-node-id="rEgBcz3xh0eWUclL92uZ3A">2.68</td><td data-page-node-id="lcXmHoi78rKCetVbsns8QK">15.64</td><td data-page-node-id="kVnyGhm1UH3yzoFOdKhDY0">1.24</td><td data-page-node-id="TdzhDz1grJcy0CZHm86UR7">8.78</td></tr>
+      <tr data-page-node-id="k7RHTDZh4G8iDNZ6bCumeQ"><td data-page-node-id="u11vV6zMxPkEPDO5XiuK1L">Tango-2-Full</td><td data-page-node-id="5oKV8zctRtsZLhja4l3DhS">2.87</td><td data-page-node-id="e3D6uZGudBVQSGTn4SRDAd">15.93</td><td data-page-node-id="YMzDdLa3MPOvzofFCORonV">1.20</td><td data-page-node-id="9LSKp7QAV854c8TD4qjyjD">10.05</td></tr>
+      <tr data-page-node-id="kBoEyqHZ5NetAxyv4rZHob"><td data-page-node-id="wd7Paxj55ZKWjALrv4KP3N">MeanAudio-L-Full</td><td data-page-node-id="1EAo8J7YyDvAgFS6y7EeiL">2.59</td><td data-page-node-id="KL4HKtEf3EXZnmxaWU6fzy">14.06</td><td data-page-node-id="jgqVsoFj3icdctH0XEe5Tz">1.21</td><td data-page-node-id="XHnLp3iSDk65S9gR3lSARD">12.46</td></tr>
+      <tr data-page-node-id="RpJ2QHgQcLEMVKT4NDapfX"><td data-page-node-id="SxjzXC5PNJVLC2JDEWjXWO">EzAudio-XL</td><td data-page-node-id="B6UDLCCc8DPorpdWxKsyrD">3.64</td><td data-page-node-id="YyaHa6UsWEGjYGn2maLGZL">14.98</td><td data-page-node-id="IbpVGi5HZGnqhljEyP94Eq">1.29</td><td data-page-node-id="hAlTrNpay9P9rqBzHa6f1O">11.38</td></tr>
+      <tr data-page-node-id="2k7PQHKrfUsUjLavItyAK1"><td data-page-node-id="SHG4vhYueYBLzDjQH5RUFD">GenAU-L-Full</td><td data-page-node-id="lMHEToGhHAP7sDufO4gwsX">2.07</td><td data-page-node-id="xJmNfn5BHhtDDbFDjGane9">14.58</td><td data-page-node-id="tlKfOHOtvkIlr40Y93MxFu">1.36</td><td data-page-node-id="p55wzbtKZuENisTGa9FhmN">10.43</td></tr>
+      <tr data-page-node-id="3EVAUCpNhbC8G8nkQ38TOU"><td data-page-node-id="tRUYHB6es8VS6xO1w2U7TF">TangoFlux</td><td data-page-node-id="LtS0VYRcsnUnswuotoLrh0">2.41</td><td data-page-node-id="6XRHoYAi2qYyOOYwJaWwB7">20.65</td><td data-page-node-id="Da90HeAb1erPwxG4Tzq2u7">1.27</td><td data-page-node-id="feer5VOcfVGlK8y9T59Q4H">12.81</td></tr>
+      <tr data-page-node-id="FNEOkYu02RhQHRcb2l8bzs"><td data-page-node-id="SJBHkBeVTZgO3beu7AyDO5">Resonate</td><td data-page-node-id="AIST84Lav5Fq1Y9tqzcLnB">2.27</td><td data-page-node-id="lARhVwWHjIFLMiye5Vdmck">15.53</td><td data-page-node-id="Gaz0hmigZcJbU7DExpCIqg">1.31</td><td data-page-node-id="GMFwDCRRGjq4oR9xY5cBBB">10.79</td></tr>
+      <tr class="ours" data-page-node-id="tZiKZs1tQTVd8a8jdaNVkF"><td data-page-node-id="xVuO7QQygBSa8NA1VQk13B">TinyAudio</td><td data-page-node-id="UOaXI7wlRcjLtcS8Bpw9wr">2.65</td><td data-page-node-id="GfBxEsjaqVFKTyXAg8V2xF">18.24</td><td data-page-node-id="JTncRoiB6xcDb5KcQi859z">1.32</td><td data-page-node-id="sLaP3qPGaCp9OXEJNZSUqh">10.44</td></tr>
+      <tr class="ours" data-page-node-id="VWP0GLYVv4mCzbDEtP0nws"><td data-page-node-id="drhsrAjn6qxC4GDAcxfJcE">TinyAudio-MF</td><td data-page-node-id="YfKHapgdgjacfq9vIf4ydw">2.83</td><td data-page-node-id="bbMfPanTDEA8xqMRXYRElz">23.65</td><td data-page-node-id="JAxyaGBUPc4ck9hWyuTXEp">1.49</td><td data-page-node-id="NWODhQXGAofQU8G4qRusxZ">8.47</td></tr>
+    </tbody>
+  </table>
+  <p class="table-title" data-page-node-id="4Vj8XLSEqVdCvnMwqU0M03">
+    FAD uses VGGish features; FD, KL, and IS use PANNs features.
+  </p>
+
+  <p class="table-title" data-page-node-id="rp1Dj41AbbPXrfbgEV9YCC">TTA-Bench, Accuracy subset</p>
+  <table data-page-node-id="RLxRPYVkfS7alSsGOmH5Vj">
+    <thead data-page-node-id="UOPEMDg8DDPV5tNOt0OisS">
+      <tr data-page-node-id="ERFMESkQ3OcFDnb5lO4Z5h"><th data-page-node-id="xmywD7NOx0GcCFaxYlCblS">Model</th><th data-page-node-id="3RfmSLM8auXxIaQ2Q553w1">CE &uarr;</th><th data-page-node-id="kejyUwRYxdWpPmyHXsP3Dz">CU &uarr;</th><th data-page-node-id="psHMp2N7c0YDJ6FYKtq6Nz">PC &uarr;</th><th data-page-node-id="zCu6E80xjtJbGJIyJh8xGc">PQ &uarr;</th><th data-page-node-id="GSSYrkm0F2Jfvhfm70rXSK">CLAP &uarr;</th></tr>
+    </thead>
+    <tbody data-page-node-id="idNGgJiZ92GPvuBHMgYZGt">
+      <tr data-page-node-id="VOGdkqgJit4boBTScIgabf"><td data-page-node-id="ooxY3kujAvJxn0OMbu5jJA">AudioLDM-L-Full</td><td data-page-node-id="ofZ9mpd47pd2VjUv6tDvLs">3.275</td><td data-page-node-id="rToLhg3xnwaojeYFXGew1r">5.137</td><td data-page-node-id="8HtrGp5Ffpw3Glq4dDVnlL">3.219</td><td data-page-node-id="dH8GFTXNU4lM91V4gqImUp">5.854</td><td data-page-node-id="pKPxpV4AsD9SpvAxC1TgXW">0.441</td></tr>
+      <tr data-page-node-id="FjsBaVCsY16moTDncygEaW"><td data-page-node-id="8RVHL2Eli3sG3Xp8EwZrJv">AudioLDM2-Large</td><td data-page-node-id="ueSjvgx7OG8M6BqpbwZjfK">3.441</td><td data-page-node-id="akxabpT0TAF2SfrsOmp5Ua">5.440</td><td data-page-node-id="ho0gVDg1x8Uf2Jgjrqk2Ja">2.957</td><td data-page-node-id="mM6otYiolTiEO24vmADHYb">5.984</td><td data-page-node-id="XtKTAIq1P96bkbFVOKSnkw">0.415</td></tr>
+      <tr data-page-node-id="5Dd9VqYZzPFdF8QmyWAadE"><td data-page-node-id="x6CCbv5jQprkkRvqt4PsuY">Tango-Full</td><td data-page-node-id="FHWCJFNGrUjnlAyii6WKVs">3.264</td><td data-page-node-id="z5dvRVGUxBJJOIdB9AERk9">5.151</td><td data-page-node-id="FJB7xxlovoIaCUd3nEd6vQ">3.360</td><td data-page-node-id="oOjAof7vOF44aXs7VjLmGX">5.954</td><td data-page-node-id="XXGxhDOEdyEujXsyLuSsfF">0.440</td></tr>
+      <tr data-page-node-id="JZEL7zQFparrdooA4utddN"><td data-page-node-id="uuBBPm2Ph9xwLtEfNwOvj8">Tango-2-Full</td><td data-page-node-id="xqLpnfauzR2oWkZ0pwJ2vm">3.468</td><td data-page-node-id="mHfHdTzWK0d9iayGPDvvUT">5.196</td><td data-page-node-id="dZFES7fnaFURO1A99ZTxSw">3.800</td><td data-page-node-id="gBN9K1hh6dLVUyGqVg0lDm">5.895</td><td data-page-node-id="VB60B5UNxS8vVSjqeaKfED">0.467</td></tr>
+      <tr data-page-node-id="pXkMyEpbOpQy9hojiTrgmP"><td data-page-node-id="pueZABooNb6H2gDIgCI7D0">MeanAudio-L-Full</td><td data-page-node-id="3q5PzoZyahJGZZDwBouQf8">3.304</td><td data-page-node-id="QOBos8lLGZkDzkmqG0YXU6">5.151</td><td data-page-node-id="GOsj02HomWwyaBZTAAyamA">2.995</td><td data-page-node-id="EOL5ojCl8R2TQ5NoM1F8vp">5.743</td><td data-page-node-id="DMjkY5pcZYrOR3xNcExm5e">0.469</td></tr>
+      <tr data-page-node-id="mpIYS4UR2y3uEJcZ1zJOdw"><td data-page-node-id="GIaJvagmvziSwHcj1qC6WH">EzAudio-XL</td><td data-page-node-id="mNEyhl0R6kpBEhTSp1KozT">3.388</td><td data-page-node-id="CS6P8fS80bF6plOcqPPYtl">5.055</td><td data-page-node-id="vfiEbjHsZ2BjzCSBwzw0qd">3.663</td><td data-page-node-id="jze9INMNY0qKVVygWIBj7X">5.719</td><td data-page-node-id="SR2lpoRkaoX2wDOr7CYHCV">0.446</td></tr>
+      <tr data-page-node-id="7DPcFN7J8WmsAjfKAImMjh"><td data-page-node-id="AC7Ea0vPFGFakonx8CPCui">GenAU-L-Full</td><td data-page-node-id="QVi1mPhsjiVGcP6ubiTgUM">3.359</td><td data-page-node-id="mUGptzPzCxEd5HQsoOGN2y">5.096</td><td data-page-node-id="ceDFBhwnFHPnDO260WkCbG">3.584</td><td data-page-node-id="HFkHFw1xYYcBJvkx8nknzc">5.802</td><td data-page-node-id="WLyzpQgfoz1DbqD8Dvq1MG">0.468</td></tr>
+      <tr data-page-node-id="BgdFTqjR7fAmCmxKHS0JNH"><td data-page-node-id="w1FJEio0pOeeUaBcGfII2q">TangoFlux</td><td data-page-node-id="fw0vYRS7anBn6FdRC5DY6e">3.539</td><td data-page-node-id="lvfmJuXYccjfp7880rosUH">5.074</td><td data-page-node-id="2rFkoUXiMedjsQoixBHlce">3.673</td><td data-page-node-id="hbJM23kEKSJXst334tw0gS">5.782</td><td data-page-node-id="bQ5IXCbUnfgvzm9iPBIm8L">0.472</td></tr>
+      <tr data-page-node-id="RNLmDWAKm4wPsWlUbRX8Lm"><td data-page-node-id="s0rpAYHW2gODvwivCsqeA9">Resonate</td><td data-page-node-id="ER8peWZA7wszwkJyd3ZDdI">3.451</td><td data-page-node-id="PHpwSCbPOz3becwLqg8l45">5.328</td><td data-page-node-id="aqJYREg556x6y03sS0pum2">3.232</td><td data-page-node-id="jX6MVOvAgtAO5oadq0oi80">6.064</td><td data-page-node-id="oNIA8wF0VAffyIELlIuWhQ">0.476</td></tr>
+      <tr class="ours" data-page-node-id="6b2U7XESGxaj3zNMB2xikL"><td data-page-node-id="ip437JJ41tFiRkLH0FhHkb">TinyAudio</td><td data-page-node-id="Ov9EDXNCElzinnB1aD0DL5">3.343</td><td data-page-node-id="fNIbXd1Z40diPm8jmKx6dC">5.262</td><td data-page-node-id="iw6cBKyryqeCHXA6vCIdc1">2.983</td><td data-page-node-id="QncWhUWBo09CjaFY5h1hcs">5.996</td><td data-page-node-id="2Hp0KiwTz5DhcU3Anq5m7V">0.429</td></tr>
+      <tr class="ours" data-page-node-id="nwxzdQaCqm2c5w0c8uhujA"><td data-page-node-id="2GDhXdzAioNTDvw5nWuW5S">TinyAudio-MF</td><td data-page-node-id="0AGZeV3xEnqDhNBaejM3q8">3.350</td><td data-page-node-id="FCl78R8bxnsZHegO6brWhV">5.257</td><td data-page-node-id="nYPGzBmMzZ4f4Or6O3HVpa">3.043</td><td data-page-node-id="9SAEUNtRWxahmD1FdHGi3U">5.994</td><td data-page-node-id="u6HCrxF9KBbvnqnuhtOVbi">0.403</td></tr>
+    </tbody>
+  </table>
+  <p class="table-title" data-page-node-id="CvQol2jdVxVUap4FQVkcUD">
+    AudioBox-Aesthetics dimensions and Resonate-style CLAP similarity. Baseline values follow the
+    Resonate evaluation.
+  </p>
+
+  <p class="table-title" data-page-node-id="RlQj65LGvGxTfeljJkJJtI">Subjective evaluation</p>
+  <table data-page-node-id="2cM3DWPEtYr0tV5gaM5Bqc">
+    <thead data-page-node-id="rrh8yIm92ArMstmULW3qbI">
+      <tr data-page-node-id="f3DzSsnYcNyrGJwC1VG9Vt"><th data-page-node-id="eeUfY3op3QqRHq8ssBEPtZ">Model</th><th data-page-node-id="pQbQnRe48CtmtCgUN9yeuy">OVL &uarr;</th><th data-page-node-id="R9RLFmOWrFtr0ydoo5jSZR">REL &uarr;</th></tr>
+    </thead>
+    <tbody data-page-node-id="SLASb3tfCP2oZrzjIQ1HO4">
+      <tr class="ours" data-page-node-id="swjLkn3cbN08C8ni9A0Tv6"><td data-page-node-id="zNli7DMSeQKXVW3mkQmldo">TinyAudio</td><td data-page-node-id="oW0jmGXIh2MFNHFNR2WoNN">3.560 &plusmn; 0.985</td><td data-page-node-id="Cx2FVcl2wFJSWn3IiSzDsi">3.520 &plusmn; 0.940</td></tr>
+      <tr data-page-node-id="XkTCDI5WECLcFpsseoL1uw"><td data-page-node-id="gGWFDaMOZw66olwKbqaSsb">TangoFlux</td><td data-page-node-id="Zgs27n0KNBTd7RERBYVHWJ">3.505 &plusmn; 0.989</td><td data-page-node-id="M0GjZPOZ6hNF8kXiR1WSmr">3.600 &plusmn; 0.992</td></tr>
+      <tr data-page-node-id="0Tr1lk4CgXvaYUwX0ot16V"><td data-page-node-id="y3v9JAvIi4AGUZGkxpeax3">EzAudio</td><td data-page-node-id="U53MfoiW5vzMKsHCBvXxtX">3.155 &plusmn; 1.169</td><td data-page-node-id="HcG13y4AEFzXsmYi100tzR">3.190 &plusmn; 1.169</td></tr>
+      <tr data-page-node-id="46tXsA9aFB6GvDhdn9sLop"><td data-page-node-id="BrMwAAXfDTCqWpcLENcBdp">AudioLDM</td><td data-page-node-id="D6dDv2r7F4ZmPbgxZU1gYB">3.015 &plusmn; 1.004</td><td data-page-node-id="aGr1f5joDBBQsveglEHa5a">2.730 &plusmn; 0.962</td></tr>
+    </tbody>
+  </table>
+  <p class="table-title" data-page-node-id="iuSF8UtQkxvRWOfbwcR3UF">
+    Ten audio experts assess ten generated waveforms from each model on a five-point scale, rating
+    Overall Quality (OVL) and Relevance (REL). Presentation order is randomized and model identities
+    are hidden from raters.
+  </p>
+</section>
+
+<section data-page-node-id="UdyCfRJscOxfB9RivgmADS">
+  <h2 data-page-node-id="IB12qzucJa9nWadz3grKhU">Ablations</h2>
+  <p data-page-node-id="fSpkJKidvsohFmhnyVpEEC">
+    Component ablations train every variant for 200K steps on the combined AudioSet and AudioCaps
+    corpus and evaluate on 957 AudioCaps test samples. Per-block AdaLN replaces the shared modulation
+    networks with block-specific ones, and Dual-stream replaces the single-stream design with an
+    MMDiT architecture; both variants use fewer Transformer blocks to match the parameter count of
+    Base. The data-selection ablations compare pretraining only, Random SFT, and SFT with equally
+    sized 417K-pair subsets.
+  </p>
+  <table data-page-node-id="CJ2QRQP1pDkHZtC6q7JSAQ">
+    <thead data-page-node-id="OV5N9GArSpFW4yAirgUNgC">
+      <tr data-page-node-id="nf8rh8i5xsy3CeyqchrEm5"><th data-page-node-id="4rkkpP4VjqL8dvTHcB97iA">Setting</th><th data-page-node-id="3DQQEiGNgPmjAq0cpbGgRI">FAD &darr;</th><th data-page-node-id="CAA5VRohHSG7NeWULSo0Z0">KL &darr;</th><th data-page-node-id="mTUa1jKLVjJgBjMCR6PamW">IS &uarr;</th></tr>
+    </thead>
+    <tbody data-page-node-id="sHxo2krAiYwY81XFQx8Pz6">
+      <tr class="ours" data-page-node-id="8sZ3fX8ws3eCF5tvBpzHIR"><td data-page-node-id="le1pW2EYK265Lm9CUXFScu">Base</td><td data-page-node-id="2hndlVIqF6o0koiBHJYLCx">2.494</td><td data-page-node-id="sQqDaXt4zaeXG5WIKJfLDH">1.399</td><td data-page-node-id="GiENrBe1JVBKeh2NNZftwX">10.695</td></tr>
+      <tr data-page-node-id="5AeLHgNwGLo3nJZ8dc68jn"><td data-page-node-id="0NwMJV8lcMx2Wu3KvdJarf">Per-block AdaLN</td><td data-page-node-id="EF6fA9baZRbfit6NnuDE7T">2.658</td><td data-page-node-id="0KpLdBfyGyBnKlVzKTR9OJ">1.370</td><td data-page-node-id="4aggRA8Z9adDTj5fzEXtxc">10.455</td></tr>
+      <tr data-page-node-id="lkAZyM5I3ZBOTCgxIqNY66"><td data-page-node-id="abc0sdDi5T1rUfK8AI9iZa">Dual-stream</td><td data-page-node-id="gIBCgUKErRBHrpnhSb8C97">3.168</td><td data-page-node-id="4VINgEJqJmGWN3mQZSZMjz">1.349</td><td data-page-node-id="lhpS7KKlbHbEPaW5poXoLG">10.093</td></tr>
+      <tr data-page-node-id="nB5D6ZCfbIByPwN4cACUKZ"><td data-page-node-id="LdjPUwhySINblDClOwiZ7v">w/o TA-CLAP adaptation</td><td data-page-node-id="GE256ipBOjtzAHCHEumevk">4.051</td><td data-page-node-id="tfo8UGsA6U5muL7ZwrbP1d">1.593</td><td data-page-node-id="n5FDSydOMDuuAhufIFVxf1">8.466</td></tr>
+      <tr data-page-node-id="DtF1EcjbOUTqj2Ld58iLxh"><td data-page-node-id="MD0yPlZ3wYYgAkaH0RLPXz">Pretraining only</td><td data-page-node-id="aNtCUtfJZ4xZD115fNYGxz">2.471</td><td data-page-node-id="dSnpfqNgIb8tG5lWb1YRqj">1.362</td><td data-page-node-id="BZhpBO7Q4aHdewquUZs26J">10.231</td></tr>
+      <tr data-page-node-id="YxBCabP3lnauHXDBYbxzXQ"><td data-page-node-id="PFSz9zn0YsEVrwu5il07Xc">Random SFT</td><td data-page-node-id="rbaICDoLMSlkR2azIM7hPp">3.412</td><td data-page-node-id="W2BHhLkErhfhPQnKBklmaA">1.401</td><td data-page-node-id="KY0aOPSRkILNpp7JaMDxGz">9.891</td></tr>
+      <tr data-page-node-id="rjNSE8pIrsGIACibspZIOP"><td data-page-node-id="K0R4VNEufOs6guJkBDLcxK">SFT</td><td data-page-node-id="WWV524gUOXhJ3xgJZ7hpdP">2.651</td><td data-page-node-id="SllaJAoNS7W2NtjOdjytAE">1.322</td><td data-page-node-id="3dw6XIE65EwhZgPYEC6FpB">10.442</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="samples" data-page-node-id="BKKECQpxuu51SwAFI55zHI">
+  <h2 data-page-node-id="S4AvGQvOQij4lcb6GGc8wN">Audio samples</h2>
+  <p class="muted" data-page-node-id="hApzrRzCwjuFFVoQfO1HCG">
+    Comparison samples will be added here. Each block below expands into a prompt and the
+    corresponding waveforms.
+  </p>
+  <div class="slot" data-page-node-id="5PGRDXLeUsG4s1acVgJeVB"><b data-page-node-id="8xTET3Qfr6nlhqYpMz77dc">Prompt 01</b><em data-page-node-id="d40lqRf8xefevhLHjASVhk">assets/audio/01.mp3 &mdash; not added yet</em></div>
+  <div class="slot" data-page-node-id="nMBfC0LMoqPmZLjTD2rsAU"><b data-page-node-id="ZuzeXm4GDTEf33clk3MMtc">Prompt 02</b><em data-page-node-id="Hl10EvnfAe5O91C4rC2zOn">assets/audio/02.mp3 &mdash; not added yet</em></div>
+  <div class="slot" data-page-node-id="8FC1wONDHfdh3xG7Q9EBro"><b data-page-node-id="jHQ8vWKkxdyckf9Tl26uPH">Prompt 03</b><em data-page-node-id="39GLidq1h3vuKrAGVUYHU4">assets/audio/03.mp3 &mdash; not added yet</em></div>
+</section>
+
+<section id="citation" data-page-node-id="yUqHGaGHWqGyCziNYjo6ab">
+  <h2 data-page-node-id="QeVf6grwo6e0xcuqqLACFX">Citation</h2>
+<pre data-page-node-id="mwT3sBLgK1sVFknp2tSwtX">@inproceedings{liu2027tinyaudio,
+  title     = {TinyAudio: Compact and Efficient Text-to-Audio
+               Generation for Low-Resource Deployment},
+  author    = {Liu, Junxi and Li, Xiquan and Guan, Wenhao and
+               Duan, Yifan and Niu, Zhikang and Ma, Ziyang and
+               Chen, Xie},
+  booktitle = {IEEE International Conference on Acoustics,
+               Speech and Signal Processing (ICASSP)},
+  year      = {2027}
 }</pre>
 </section>
 
-<footer>
-  Page built from a plain HTML template. Last updated 2026-09-11.
+<footer data-page-node-id="xzNG4QixRx4gvg3595m6VE">
+  Correspondence: <a href="#" data-page-node-id="hyglj28qGT5C1BQ4kC1aRw">Junxi Liu</a>, <a href="#" data-page-node-id="zsPTgCzuJwOOgDFaV6mYFY">Xie Chen</a>.
 </footer>
 
 </div>
