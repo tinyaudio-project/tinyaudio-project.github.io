@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>TinyAudio</title>
+<meta name="description" content="Project page for TinyAudio.">
+
+<meta name="citation_title" content="TinyAudio">
+<meta name="citation_author" content="Author One">
+<meta name="citation_publication_date" content="2026">
+<meta name="citation_pdf_url" content="#">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="TinyAudio">
+<meta property="og:description" content="Project page for TinyAudio.">
+<meta property="og:image" content="assets/img/og.png">
+
+<style>
+:root {
+  --fg: #111111;
+  --fg2: #575757;
+  --fg3: #8e8e8e;
+  --line: #e6e6e6;
+  --accent: #185fa5;
+  --bg: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg: #ededed;
+    --fg2: #b0b0b0;
+    --fg3: #8a8a8a;
+    --line: #2e2e2e;
+    --accent: #85b7eb;
+    --bg: #111111;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  font-weight: 400;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 96px 24px 120px; }
+h1 { font-size: 27px; font-weight: 500; line-height: 1.35; letter-spacing: -0.01em; margin: 0 0 20px; }
+h2 { font-size: 14px; font-weight: 500; margin: 0 0 18px; }
+p { margin: 0 0 16px; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: var(--fg3); }
+.authors { font-size: 15px; color: var(--fg2); margin: 0 0 6px; }
+.affil { font-size: 13px; color: var(--fg3); margin: 0 0 26px; }
+.links { font-size: 14px; color: var(--fg3); margin: 0 0 4px; }
+.links span { margin: 0 8px; color: var(--line); }
+section { border-top: 1px solid var(--line); padding-top: 34px; margin-top: 56px; }
+.abstract { color: var(--fg2); }
+.slot {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+  border: 1px dashed var(--line); border-radius: 6px;
+  padding: 14px 16px; margin-bottom: 10px;
+  font-size: 13px; color: var(--fg3);
+}
+.slot b { font-weight: 400; color: var(--fg2); }
+pre {
+  margin: 0; padding: 18px 20px; overflow-x: auto;
+  border: 1px solid var(--line); border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px; line-height: 1.7; color: var(--fg2);
+}
+footer { border-top: 1px solid var(--line); margin-top: 56px; padding-top: 34px; font-size: 13px; color: var(--fg3); }
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<h1>TinyAudio: <span class="muted">paper subtitle goes here</span></h1>
+
+<p class="authors">
+  <a href="#">Author One</a>, <a href="#">Author Two</a>, <a href="#">Author Three</a>
+</p>
+<p class="affil">Affiliation One &middot; Affiliation Two</p>
+
+<p class="links">
+  <a href="#">Paper</a><span>|</span>
+  <a href="#">arXiv</a><span>|</span>
+  <a href="#">Code</a><span>|</span>
+  <a href="#samples">Audio samples</a>
+</p>
+
+<section>
+  <h2>Abstract</h2>
+  <p class="abstract">
+    Abstract placeholder. Replace this paragraph with the paper abstract.
+  </p>
+</section>
+
+<section>
+  <h2>Overview</h2>
+  <div class="slot"><b>Figure 1</b><em>assets/img/teaser.png &mdash; not added yet</em></div>
+</section>
+
+<section id="samples">
+  <h2>Audio samples</h2>
+  <div class="slot"><b>01</b><em>assets/audio/01.mp3 &mdash; not added yet</em></div>
+  <div class="slot"><b>02</b><em>assets/audio/02.mp3 &mdash; not added yet</em></div>
+  <div class="slot"><b>03</b><em>assets/audio/03.mp3 &mdash; not added yet</em></div>
+</section>
+
+<section>
+  <h2>Citation</h2>
+<pre>@inproceedings{tinyaudio2026,
+  title     = {TinyAudio},
+  author    = {Author One and Author Two},
+  booktitle = {ICASSP},
+  year      = {2026}
+}</pre>
+</section>
+
+<footer>
+  Page built from a plain HTML template. Last updated 2026-09-11.
+</footer>
+
+</div>
+</body>
+</html>
