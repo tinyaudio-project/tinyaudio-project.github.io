@@ -1,35 +1,35 @@
 <!DOCTYPE html>
-  <html>
-  <head>
-    <meta charset="utf-8">
+  <html data-page-node-id="IqI7UvErnfQIMLnARq3a0i">
+  <head data-page-node-id="H4HJEj2MPDdST4kf2B1ojx">
+    <meta charset="utf-8" data-page-node-id="TrpyDeIqVgDBnZNjfMfhb7">
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-  <meta name="description" content="TinyAudio: Compact and Efficient Text-to-Audio Generation for Low-Resource Deployment">
-  <meta property="og:title" content="TinyAudio: Compact and Efficient Text-to-Audio Generation for Low-Resource Deployment"/>
-  <meta property="og:description" content="A compact flow-matching text-to-audio model with 87M inference-time parameters and 0.48 GB peak GPU memory."/>
-  <meta property="og:url" content="https://tinyaudio-project.github.io/"/>
-  <meta property="og:image" content="static/images/og.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <meta name="description" content="TinyAudio: Compact and Efficient Text-to-Audio Generation for Low-Resource Deployment" data-page-node-id="c8SSWzE8El0rjQ81VWeG2N">
+  <meta property="og:title" content="TinyAudio: Compact and Efficient Text-to-Audio Generation for Low-Resource Deployment" data-page-node-id="wOGyT1GthG0OUBoTheSHAT"/>
+  <meta property="og:description" content="A compact flow-matching text-to-audio model with 87M inference-time parameters and 0.48 GB peak GPU memory." data-page-node-id="TVSYQJBseHC7TPn4FHWnwH"/>
+  <meta property="og:url" content="https://tinyaudio-project.github.io/" data-page-node-id="mMZM5G1OFBQmidPT8aoByn"/>
+  <meta property="og:image" content="static/images/og.png" data-page-node-id="J27cwHZu31qMI49NEjrZsZ" />
+  <meta property="og:image:width" content="1200" data-page-node-id="2q6By9ArCfMGzi35bJ7BA9"/>
+  <meta property="og:image:height" content="630" data-page-node-id="ngV3q9H2zjz08RJbcuoAog"/>
 
-  <meta name="twitter:title" content="TinyAudio">
-  <meta name="twitter:description" content="A compact flow-matching text-to-audio model with 87M inference-time parameters and 0.48 GB peak GPU memory.">
-  <meta name="twitter:image" content="static/images/og.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="keywords" content="text-to-audio generation, compact generative models, flow matching, low-resource deployment">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:title" content="TinyAudio" data-page-node-id="H9H1bBizJpQBfxlewFsKH3">
+  <meta name="twitter:description" content="A compact flow-matching text-to-audio model with 87M inference-time parameters and 0.48 GB peak GPU memory." data-page-node-id="CgwTBNk4188XBQlAhKeb6b">
+  <meta name="twitter:image" content="static/images/og.png" data-page-node-id="ABB1LE0e4dDMyZSXWV5tSq">
+  <meta name="twitter:card" content="summary_large_image" data-page-node-id="JvAOysp3KfplI5zOXQGoIL">
+  <meta name="keywords" content="text-to-audio generation, compact generative models, flow matching, low-resource deployment" data-page-node-id="rpEZQ2Dn5VwxivGDxga5Rv">
+  <meta name="viewport" content="width=device-width, initial-scale=1" data-page-node-id="bFF9N4cHzkbQQGVwwFAh8L">
 
   <title>TinyAudio</title>
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  rel="stylesheet" data-page-node-id="R0kWaABjtBfjqvim8h1Hjq">
 
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="static/css/bulma.min.css" data-page-node-id="5fskUXBjYKhQCTPsfMIpc0">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css" data-page-node-id="ilbAwDq5ZSZcnIqI6pd2fP">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css" data-page-node-id="4IBAvX0HRdvJsccmFEIEgc">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css" data-page-node-id="TlXC4NsRNShvD0VF62CZC0">
   <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" data-page-node-id="nYP8PSH5RIfiNBfUeaLLCq">
+  <link rel="stylesheet" href="static/css/index.css" data-page-node-id="AFMIajRDhPMJfwWnW37Q7x">
 
   <style>
     .audio-table {
@@ -133,62 +133,56 @@
   <script src="static/js/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-<body>
+<body data-page-node-id="DNX0CivcqaGCKdCOcm3lTg">
 
 
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
+  <section class="hero" data-page-node-id="Lql8TAB6eD5knFq6mAngIi">
+    <div class="hero-body" data-page-node-id="9HkyHjKiDvoGUTnxzFLkUA">
+      <div class="container is-max-desktop" data-page-node-id="oIGjaPYipjU5vY345Y9kmI">
+        <div class="columns is-centered" data-page-node-id="ywS34WJUkEnp9IYCg3Wn9p">
+          <div class="column has-text-centered" data-page-node-id="EXSLVrhzEBzjmHe7TwDU1l">
 
-            <h1 class="title is-2 publication-title" style="margin-left: -25px; margin-right: -25px; font-size: 2.1rem;">TinyAudio: Compact and Efficient Text-to-Audio Generation for Low-Resource Deployment</h1>
-            <div class="is-size-6 publication-authors">
-              <span class="author-block">Junxi Liu<sup>1,2</sup>,</span>
-              <span class="author-block">Xiquan Li<sup>1,3</sup>,</span>
-              <span class="author-block">Wenhao Guan<sup>2</sup>,</span>
-              <span class="author-block">Yifan Duan<sup>1,2</sup>,</span>
-              <span class="author-block">Zhikang Niu<sup>1,2</sup>,</span>
-              <span class="author-block">Yanru Huo<sup>1</sup>,</span>
-              <span class="author-block">Ziyang Ma<sup>1,2,4</sup>,</span>
-              <span class="author-block">Xie Chen<sup>1,2,*</sup></span>
+            <h1 class="title is-2 publication-title" style="margin-left: -25px; margin-right: -25px; font-size: 2.1rem;" data-page-node-id="16fBel6eWrl3CDetqrKjHP">TinyAudio: Compact and Efficient Text-to-Audio Generation for Low-Resource Deployment</h1>
+            <div class="is-size-6 publication-authors" data-page-node-id="CJVPwcNVFxSBcMsVZwkMGJ">
+              <span class="author-block" data-page-node-id="u8Rh2jvlxB0gm2f9Ev1KDc">Junxi Liu<sup data-page-node-id="79lTxoYqzD4ev91EWgfOup">1,2</sup>,</span>
+              <span class="author-block" data-page-node-id="PZrQl9CIEmvBfYphIWG7YH">Xiquan Li<sup data-page-node-id="yGW4wmfLMmhY0IcjiEhOzO">1,3</sup>,</span>
+              <span class="author-block" data-page-node-id="zK9uZidmhUYvo0UC0yS39x">Wenhao Guan<sup data-page-node-id="ZF0pTl5p7OzMCpWXbQsPCv">2</sup>,</span>
+              <span class="author-block" data-page-node-id="wv8UoCPjKTurxSadPC3XUj">Yifan Duan<sup data-page-node-id="ZZcQYnkZDRLZd0WtvADcVB">1,2</sup>,</span>
+              <span class="author-block" data-page-node-id="tFhBp4V7sNKSL7r20NC0mv">Zhikang Niu<sup data-page-node-id="A7xEM1aAeiXurJeMgNhhsB">1,2</sup>,</span>
+              <span class="author-block" data-page-node-id="PymSaiyUg1G34Po2iob8yq">Yanru Huo<sup data-page-node-id="uVIf6e6nnNsWIBmWnDJpjK">1</sup>,</span>
+              <span class="author-block" data-page-node-id="xyD8gOxD2N7brPWnELyxGC">Ziyang Ma<sup data-page-node-id="MhxJcdeFmgFMdyPu5jb55y">1,2,4</sup>,</span>
+              <span class="author-block" data-page-node-id="PgUc3H5AVK4cOiCIcXodTz">Xie Chen<sup data-page-node-id="8oeAfCrVDyRbWbj4dGskEG">1,2,*</sup></span>
             </div>
 
-            <div class="is-size-6 publication-authors">
-              <span class="author-block">
-                <sup>1</sup>X-LANCE Lab, Shanghai Jiao Tong University &nbsp;&middot;&nbsp;
-                <sup>2</sup>Shanghai Innovation Institute<br>
-                <sup>3</sup>SJTU Paris Elite Institute of Technology &nbsp;&middot;&nbsp;
-                <sup>4</sup>Nanyang Technological University
+            <div class="is-size-6 publication-authors" data-page-node-id="ADmRg0Gor2mCFSY4363Qal">
+              <span class="author-block" data-page-node-id="w7lyvdSIAnmeYNgIa8rLsc">
+                <sup data-page-node-id="lrF8qUESCFB6FakoNFxgfv">1</sup>X-LANCE Lab, Shanghai Jiao Tong University &nbsp;&middot;&nbsp;
+                <sup data-page-node-id="n1gDhQ92HWi5jQRqtyMXAJ">2</sup>Shanghai Innovation Institute<br data-page-node-id="7uX9wSKHNzSxo3obzoA3Fh">
+                <sup data-page-node-id="JXTNcWuyoIWnJ6KTGNAHyC">3</sup>SJTU Paris Elite Institute of Technology &nbsp;&middot;&nbsp;
+                <sup data-page-node-id="bD3thtvoR93cmabGAxYutW">4</sup>Nanyang Technological University
               </span>
-              <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding author</small></span>
+              <span class="eql-cntrb" data-page-node-id="C1OxujEG6XCNi9ckUogYQe"><small data-page-node-id="Xfe0XpG1kfIjGt1CRwMgQ1"><br data-page-node-id="gH675gOg0Lw8xXtnnYteWB"><sup data-page-node-id="MG2n2BdMeYLlJRPySpuIDK">*</sup>Corresponding author</small></span>
             </div>
 
-            <div class="column has-text-centered">
-              <div class="publication-links">
-                <!-- Paper / arXiv：投稿中，链接待补 -->
-                <span class="link-block">
-                  <a href="#" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                    <span>Paper</span>
+            <div class="column has-text-centered" data-page-node-id="w6DN2esAxVMpUlIZaKUYux">
+              <div class="publication-links" data-page-node-id="g0IB0B0CzDomVQk8LKLE3M">
+                <!-- arXiv：投稿中，链接待补 -->
+                <span class="link-block" data-page-node-id="NGRSAXcJDuBzWkPXN6yLKh">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark" data-page-node-id="KIckCNDgzcyyBde4MbuusB">
+                    <span class="icon" data-page-node-id="YGLBWOGJO83hES11IrhT83"><i class="ai ai-arxiv" data-page-node-id="UF7wBjZ7MhtdZ7ZKJpjnJc"></i></span>
+                    <span data-page-node-id="kqWAYYftlyvA4jsNycyYcM">arXiv</span>
                   </a>
                 </span>
-                <span class="link-block">
-                  <a href="#" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="ai ai-arxiv"></i></span>
-                    <span>arXiv</span>
+                <span class="link-block" data-page-node-id="WjBWPTypQ89yortVHAxNx6">
+                  <a href="https://github.com/junxi25liu/TinyAudio" target="_blank" class="external-link button is-normal is-rounded is-dark" data-page-node-id="tj4YLQ64DsBuQhUnUqGUMM">
+                    <span class="icon" data-page-node-id="7FZnifPtcZZP59XwrHAtFr"><i class="fab fa-github" data-page-node-id="xKTDU7qQM3TuSiiO7omo7w"></i></span>
+                    <span data-page-node-id="V90YVPTwl316Urn7aLY1RW">Code</span>
                   </a>
                 </span>
-                <span class="link-block">
-                  <a href="https://github.com/junxi25liu/TinyAudio" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fab fa-github"></i></span>
-                    <span>Code</span>
-                  </a>
-                </span>
-                <span class="link-block">
-                  <a href="#samples" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fas fa-headphones"></i></span>
-                    <span>Audio samples</span>
+                <span class="link-block" data-page-node-id="1sR9eX0ZifzV8HFxwd6O3o">
+                  <a href="#samples" class="external-link button is-normal is-rounded is-dark" data-page-node-id="AsEEmiLT0SkBu3FgEgOzVZ">
+                    <span class="icon" data-page-node-id="e2BzQGgLGRR9thgzhemTCo"><i class="fas fa-headphones" data-page-node-id="eHGiNMyFEsPLrlnqGDZTL5"></i></span>
+                    <span data-page-node-id="CZr2VgjuyEPV5Nq0LMlfNa">Audio samples</span>
                   </a>
                 </span>
               </div>
@@ -202,24 +196,24 @@
 
 
 <!-- Overall performance -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
+<section class="hero teaser" data-page-node-id="88dAY1JBMYCsrIz0sCT9eQ">
+  <div class="container is-max-desktop" data-page-node-id="hVmOJU3026KBjwd77D6dyK">
+    <div class="hero-body" data-page-node-id="orY7pNY85FdAzcdKChnzlA">
 
-      <div style="width: 85%; height: auto; margin: 0 auto;">
-        <img src="static/images/fig1_teaser.png" alt="AudioCaps quality versus generator size" style="width: 100%; height: auto;">
+      <div style="width: 85%; height: auto; margin: 0 auto;" data-page-node-id="lgKzzC65H4dTF5EFmoAvO8">
+        <img src="static/images/fig1_teaser.png" alt="AudioCaps quality versus generator size" style="width: 100%; height: auto;" data-page-node-id="CNLADIsaYJfWd0doEgwelv">
       </div>
 
-      <p>
-        <div class="content has-text-justified" style="margin: 0 0;">
-          <br>
+      <p data-page-node-id="pRo7DuPiGZ7r9YMmgagDpU">
+        <div class="content has-text-justified" style="margin: 0 0;" data-page-node-id="zW0sXmGIMXTb8YAnRnfrGp">
+          <br data-page-node-id="aPDYtIN0YYBDruXXa6mZxv">
           TinyAudio is a compact flow-matching text-to-audio model that generates 44.1&nbsp;kHz audio with only
-          <strong>87M</strong> inference-time parameters &mdash; over 90% fewer than representative billion-parameter
+          <strong data-page-node-id="FXZxyDlYCXTczFuVbMqlC9">87M</strong> inference-time parameters &mdash; over 90% fewer than representative billion-parameter
           pipelines &mdash; and 0.48&nbsp;GB of peak GPU memory. Its core TA-DiT jointly models text and audio tokens
           in a single stream with layer-shared conditional modulation, while TA-CLAP provides audio-aligned text
           conditioning. TinyAudio-MF, trained with the Improved Mean Flows objective, reduces latent generation from
           25 Euler steps to a single step, enabling real-time generation under a four-core CPU quota.
-          <br>
+          <br data-page-node-id="eAduq3cKXrutF3zRpGVTFD">
         </div>
       </p>
 
@@ -230,106 +224,106 @@
 
 
 <!-- Audio samples -->
-<section class="section hero is-light" id="samples">
-  <div class="container">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-fullwidth">
-        <h2 class="title is-3">Audio Generation Samples</h2>
-        <br>
-        <p class="ph-note">Audio files have not been added yet &mdash; dashed cells show the expected file name under <code>static/audio/&lt;System&gt;/</code>.</p>
-        <div class="content has-text-justified" style="max-width: 1000px; margin: 0 auto;">
-          <table class="table is-bordered is-narrow is-hoverable is-fullwidth audio-table">
-            <thead>
-              <br>
-              <tr>
-                <th>Caption</th>
-                <th>TinyAudio (Ours)<br>25 steps</th>
-                <th>TinyAudio-MF (Ours)<br>1 step</th>
-                <th>MeanAudio-L-Full<br>480M, 25 steps</th>
-                <th>TangoFlux<br>516M, 50 steps</th>
-                <th>GT</th>
+<section class="section hero is-light" id="samples" data-page-node-id="IjjXWe0raD8Yt4oLU2lDzB">
+  <div class="container" data-page-node-id="aldNiYOHCABar1vbcbDIgG">
+    <div class="columns is-centered has-text-centered" data-page-node-id="J3HbJCJrxnb2TRkrPVjVAC">
+      <div class="column is-fullwidth" data-page-node-id="YoxvW8CktVDj1Za49gMgBT">
+        <h2 class="title is-3" data-page-node-id="bCVfhVPPjzvSW9iLmAP1RS">Audio Generation Samples</h2>
+        <br data-page-node-id="eIt561cfK632Tp9ACGJJEg">
+        <p class="ph-note" data-page-node-id="NUxK8suutHkzdNEe2m7Ncp">Audio files have not been added yet &mdash; dashed cells show the expected file name under <code data-page-node-id="MSSqpcIlqfVeczEZuiaYwe">static/audio/&lt;System&gt;/</code>.</p>
+        <div class="content has-text-justified" style="max-width: 1000px; margin: 0 auto;" data-page-node-id="u1VXONwm2i2xY4aH9EGTCI">
+          <table class="table is-bordered is-narrow is-hoverable is-fullwidth audio-table" data-page-node-id="E2pIzzeHopQFqqq6amtXH6">
+            <thead data-page-node-id="FwJ2RqNsgbZBPafZxiLvU7">
+              <br data-page-node-id="sGK6oM5z9PHjWWl0MBdvRg">
+              <tr data-page-node-id="lnGJpYfKNTtH3obyFpqpph">
+                <th data-page-node-id="tbjZk812ZHvBIkC0Zb0qrB">Caption</th>
+                <th data-page-node-id="Wy3yYTdmrl3qpcH8NNuikX">TinyAudio (Ours)<br data-page-node-id="1ZgD3R7Bzd303hvF3rSeYg">25 steps</th>
+                <th data-page-node-id="9JG25wk5RuwqUKjVnqejzt">TinyAudio-MF (Ours)<br data-page-node-id="8xKmfYNb09OX8DBj16L2Ow">1 step</th>
+                <th data-page-node-id="7jtnvGDaJuHXVSirmS1CG3">MeanAudio-L-Full<br data-page-node-id="dAX11vWWVlXv8CF6U3l9Bn">480M, 25 steps</th>
+                <th data-page-node-id="QJKnOGw5bOGhGSdiKvpsE5">TangoFlux<br data-page-node-id="bh04oUNNYeyiMRx0a3XrWA">516M, 50 steps</th>
+                <th data-page-node-id="6IWSiE7otiMYK0LS1WGjLL">GT</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>A distant church bell tolls slowly, then a flock of pigeons takes flight.</td>
-                <td data-file="01.wav"><audio controls preload="metadata" src="static/audio/TinyAudio/01.wav"></audio></td>
-                <td data-file="01.wav"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/01.wav"></audio></td>
-                <td data-file="01.wav"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/01.wav"></audio></td>
-                <td data-file="01.wav"><audio controls preload="metadata" src="static/audio/TangoFlux/01.wav"></audio></td>
-                <td data-file="01.wav"><audio controls preload="metadata" src="static/audio/GT/01.wav"></audio></td>
+            <tbody data-page-node-id="0KSDaECOnb2w32HDbShz7Z">
+              <tr data-page-node-id="Pg0cmkvcrdUR3ZKmbBqsb3">
+                <td data-page-node-id="PHoe4lFoDASr4gOQqiGbUp">A distant church bell tolls slowly, then a flock of pigeons takes flight.</td>
+                <td data-file="01.wav" data-page-node-id="CFa7dEmO4zQrar7CxAmD26"><audio controls preload="metadata" src="static/audio/TinyAudio/01.wav" data-page-node-id="69RNEYogwlvGe0ZR3diNpF"></audio></td>
+                <td data-file="01.wav" data-page-node-id="7EKcppIv2LQBVBYZYOCDCI"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/01.wav" data-page-node-id="zFX61RNkEQNtdAyi0TapqU"></audio></td>
+                <td data-file="01.wav" data-page-node-id="WnHJrQKBSs8nkaoAA843DW"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/01.wav" data-page-node-id="eCBG82YysKemk7Zw2611uP"></audio></td>
+                <td data-file="01.wav" data-page-node-id="etpSCGTcaYvlYzHP2kHsEh"><audio controls preload="metadata" src="static/audio/TangoFlux/01.wav" data-page-node-id="33iiOs4RMucjVQ5BHfUNeW"></audio></td>
+                <td data-file="01.wav" data-page-node-id="3GqvbMed3VDA7sJwXSEtoO"><audio controls preload="metadata" src="static/audio/GT/01.wav" data-page-node-id="WxX2v3YgghGYWCyFnqHVqM"></audio></td>
               </tr>
-              <tr>
-                <td>Heavy rain drumming on a metal roof while thunder rolls in the distance.</td>
-                <td data-file="02.wav"><audio controls preload="metadata" src="static/audio/TinyAudio/02.wav"></audio></td>
-                <td data-file="02.wav"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/02.wav"></audio></td>
-                <td data-file="02.wav"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/02.wav"></audio></td>
-                <td data-file="02.wav"><audio controls preload="metadata" src="static/audio/TangoFlux/02.wav"></audio></td>
-                <td data-file="02.wav"><audio controls preload="metadata" src="static/audio/GT/02.wav"></audio></td>
+              <tr data-page-node-id="2ARLhowoZEDlJDSyqELuSH">
+                <td data-page-node-id="9NGqZ9wvotcrihAPQQvULa">Heavy rain drumming on a metal roof while thunder rolls in the distance.</td>
+                <td data-file="02.wav" data-page-node-id="F7BXbeCcEOxN8YSw7gE4Lq"><audio controls preload="metadata" src="static/audio/TinyAudio/02.wav" data-page-node-id="4JC7ym9orkbEwMfUAq5TWt"></audio></td>
+                <td data-file="02.wav" data-page-node-id="lS76vfc2ywJSWv2Hqc4k3Y"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/02.wav" data-page-node-id="CDIEL9VKl8Bi1STluaEEY8"></audio></td>
+                <td data-file="02.wav" data-page-node-id="B5GIoEI8v72MnlFHK2Y2mE"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/02.wav" data-page-node-id="IKKFtRYFgJmt3OyXqGA0V0"></audio></td>
+                <td data-file="02.wav" data-page-node-id="kQxiGW2gcqhDJ2BcMIafeD"><audio controls preload="metadata" src="static/audio/TangoFlux/02.wav" data-page-node-id="UUrAOG8U3LqLeXrRIZUYFe"></audio></td>
+                <td data-file="02.wav" data-page-node-id="thVRbrUOB1Yz6Oh3PLv0D6"><audio controls preload="metadata" src="static/audio/GT/02.wav" data-page-node-id="1e91RyyepEU74yiMsf9OuG"></audio></td>
               </tr>
-              <tr>
-                <td>A car door slams shut, the engine turns over, and tires screech away.</td>
-                <td data-file="03.wav"><audio controls preload="metadata" src="static/audio/TinyAudio/03.wav"></audio></td>
-                <td data-file="03.wav"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/03.wav"></audio></td>
-                <td data-file="03.wav"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/03.wav"></audio></td>
-                <td data-file="03.wav"><audio controls preload="metadata" src="static/audio/TangoFlux/03.wav"></audio></td>
-                <td data-file="03.wav"><audio controls preload="metadata" src="static/audio/GT/03.wav"></audio></td>
+              <tr data-page-node-id="1F5077CjNBOWefC6Eof3XD">
+                <td data-page-node-id="unIUBcOW3ir2WgL3gWSQ8B">A car door slams shut, the engine turns over, and tires screech away.</td>
+                <td data-file="03.wav" data-page-node-id="HaQXg4yVdIc6kGJ4X8m5tM"><audio controls preload="metadata" src="static/audio/TinyAudio/03.wav" data-page-node-id="xpCzJD4aZj4i8V2tBs90xG"></audio></td>
+                <td data-file="03.wav" data-page-node-id="KQjwHVE8TvB7UPRk3M6RUH"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/03.wav" data-page-node-id="kqhpk1qW8PigXWXZR54Aw9"></audio></td>
+                <td data-file="03.wav" data-page-node-id="MAKsQCDO0PIg2lWwUTaQiP"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/03.wav" data-page-node-id="5wFSRXXVzGdD0D6awRmrwC"></audio></td>
+                <td data-file="03.wav" data-page-node-id="pR6RV5XTwwIuWIeYFYbsuh"><audio controls preload="metadata" src="static/audio/TangoFlux/03.wav" data-page-node-id="X1w4MQPhDKr1V0PFBbrbnV"></audio></td>
+                <td data-file="03.wav" data-page-node-id="MrKpYED26yz1GITs6EeqHN"><audio controls preload="metadata" src="static/audio/GT/03.wav" data-page-node-id="YYGPY6xwst4DlFBceTKxjL"></audio></td>
               </tr>
-              <tr>
-                <td>Simultaneous chatter, laughter, and clinking glass fill a crowded cafe.</td>
-                <td data-file="04.wav"><audio controls preload="metadata" src="static/audio/TinyAudio/04.wav"></audio></td>
-                <td data-file="04.wav"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/04.wav"></audio></td>
-                <td data-file="04.wav"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/04.wav"></audio></td>
-                <td data-file="04.wav"><audio controls preload="metadata" src="static/audio/TangoFlux/04.wav"></audio></td>
-                <td data-file="04.wav"><audio controls preload="metadata" src="static/audio/GT/04.wav"></audio></td>
+              <tr data-page-node-id="6Ln0KaIvPcrIs3bfJGln35">
+                <td data-page-node-id="6hGNJGItxb1PCbgjILVw1H">Simultaneous chatter, laughter, and clinking glass fill a crowded cafe.</td>
+                <td data-file="04.wav" data-page-node-id="k2VhsDD9WIavEU4kBneWxQ"><audio controls preload="metadata" src="static/audio/TinyAudio/04.wav" data-page-node-id="6SjeQ0SGAzQJmK1njxyHWX"></audio></td>
+                <td data-file="04.wav" data-page-node-id="QNbMdZAFoGDPxpKco2EjQ0"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/04.wav" data-page-node-id="PrlMfFXam8XTsrBicHZU1r"></audio></td>
+                <td data-file="04.wav" data-page-node-id="pFfr6M3X7P4cRfDUOyMFf3"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/04.wav" data-page-node-id="YsE0aln648Z1enmwUKCMRT"></audio></td>
+                <td data-file="04.wav" data-page-node-id="fxAempOGC1yyNCFfQxZFGt"><audio controls preload="metadata" src="static/audio/TangoFlux/04.wav" data-page-node-id="zcCaHeChlATHG21x7gTSmg"></audio></td>
+                <td data-file="04.wav" data-page-node-id="6OB8RLPU6ASVTqvbUM2Kuz"><audio controls preload="metadata" src="static/audio/GT/04.wav" data-page-node-id="uBw71RDBrQEXstsxsv5XfU"></audio></td>
               </tr>
-              <tr>
-                <td>A wooden chair scrapes across the floor, followed by footsteps and a door creaking open.</td>
-                <td data-file="05.wav"><audio controls preload="metadata" src="static/audio/TinyAudio/05.wav"></audio></td>
-                <td data-file="05.wav"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/05.wav"></audio></td>
-                <td data-file="05.wav"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/05.wav"></audio></td>
-                <td data-file="05.wav"><audio controls preload="metadata" src="static/audio/TangoFlux/05.wav"></audio></td>
-                <td data-file="05.wav"><audio controls preload="metadata" src="static/audio/GT/05.wav"></audio></td>
+              <tr data-page-node-id="L9AkrtvFVqpRQf5Qs4JJQu">
+                <td data-page-node-id="ENLDK3JMooJFGwAL4xejcp">A wooden chair scrapes across the floor, followed by footsteps and a door creaking open.</td>
+                <td data-file="05.wav" data-page-node-id="RAiXzzLrJLx8S18K9vPFBh"><audio controls preload="metadata" src="static/audio/TinyAudio/05.wav" data-page-node-id="V0Sk8QyUMndp4NuwMVp603"></audio></td>
+                <td data-file="05.wav" data-page-node-id="YaI36PppHba7ZB9FJ9aXSQ"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/05.wav" data-page-node-id="V3eWfvJS8Q0XNxOOfqvQNh"></audio></td>
+                <td data-file="05.wav" data-page-node-id="KpmgqJ5qQ0iwjW5dJBXjEX"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/05.wav" data-page-node-id="L6yjRdXx7QixmaLHiobYpc"></audio></td>
+                <td data-file="05.wav" data-page-node-id="3Qvuf9kPb4vyUCrrFsfQrw"><audio controls preload="metadata" src="static/audio/TangoFlux/05.wav" data-page-node-id="uveipVpdwwWtadleJlsKVQ"></audio></td>
+                <td data-file="05.wav" data-page-node-id="vuEJDCpQ6aXnL9yNE35DlT"><audio controls preload="metadata" src="static/audio/GT/05.wav" data-page-node-id="rAkndJYAxiurRuFM1SAldQ"></audio></td>
               </tr>
-              <tr>
-                <td>First the sharp hiss of a spray can, then the mellow strum of an acoustic guitar.</td>
-                <td data-file="06.wav"><audio controls preload="metadata" src="static/audio/TinyAudio/06.wav"></audio></td>
-                <td data-file="06.wav"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/06.wav"></audio></td>
-                <td data-file="06.wav"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/06.wav"></audio></td>
-                <td data-file="06.wav"><audio controls preload="metadata" src="static/audio/TangoFlux/06.wav"></audio></td>
-                <td data-file="06.wav"><audio controls preload="metadata" src="static/audio/GT/06.wav"></audio></td>
+              <tr data-page-node-id="Ljoc3fvxo2VX92IFUANvy1">
+                <td data-page-node-id="Xxy1XkblZzq7AsrADVCnxj">First the sharp hiss of a spray can, then the mellow strum of an acoustic guitar.</td>
+                <td data-file="06.wav" data-page-node-id="PBouHKFBHZJnAOYAtqsOEk"><audio controls preload="metadata" src="static/audio/TinyAudio/06.wav" data-page-node-id="HvbXpo4C8bUzEBwSEaW2qE"></audio></td>
+                <td data-file="06.wav" data-page-node-id="hUp6MFmW8dDtxOx9uaTjMf"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/06.wav" data-page-node-id="JoQ2PheUaG6zMpZZuCBRWz"></audio></td>
+                <td data-file="06.wav" data-page-node-id="e3Ay1cT7it9d98us6gzjoS"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/06.wav" data-page-node-id="9IKLQPPmJOuBwL5AJgauPU"></audio></td>
+                <td data-file="06.wav" data-page-node-id="yAEdfWTyRrHGtAFcr1Ctap"><audio controls preload="metadata" src="static/audio/TangoFlux/06.wav" data-page-node-id="RjJccaVVBcpwIy4EYIyZ2j"></audio></td>
+                <td data-file="06.wav" data-page-node-id="dIwozihWXYqk6XCAMnzoRE"><audio controls preload="metadata" src="static/audio/GT/06.wav" data-page-node-id="STirtEzbgMNWGneG47xBXw"></audio></td>
               </tr>
-              <tr>
-                <td>A dog barks twice in the distance as bees buzz around a nearby hive.</td>
-                <td data-file="07.wav"><audio controls preload="metadata" src="static/audio/TinyAudio/07.wav"></audio></td>
-                <td data-file="07.wav"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/07.wav"></audio></td>
-                <td data-file="07.wav"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/07.wav"></audio></td>
-                <td data-file="07.wav"><audio controls preload="metadata" src="static/audio/TangoFlux/07.wav"></audio></td>
-                <td data-file="07.wav"><audio controls preload="metadata" src="static/audio/GT/07.wav"></audio></td>
+              <tr data-page-node-id="zl8Z3LpKklWyS50yGHdw5I">
+                <td data-page-node-id="raXC4pFn0EHKfIfvLdEwgy">A dog barks twice in the distance as bees buzz around a nearby hive.</td>
+                <td data-file="07.wav" data-page-node-id="tsn4DaiPEA2Hf5jFug26O4"><audio controls preload="metadata" src="static/audio/TinyAudio/07.wav" data-page-node-id="VasXIVNLGDJZBk9NnZrst8"></audio></td>
+                <td data-file="07.wav" data-page-node-id="mOrXKkrAAe3e2Lb7gm5mrB"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/07.wav" data-page-node-id="U1pkTRFbGFZQoRE2CVM4ad"></audio></td>
+                <td data-file="07.wav" data-page-node-id="vwXJBqRPMOGBuL5hsSx8Mj"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/07.wav" data-page-node-id="kK563KqGYytb78aVZjrMiZ"></audio></td>
+                <td data-file="07.wav" data-page-node-id="TJoh43SV5BE1dTbtBfb1q0"><audio controls preload="metadata" src="static/audio/TangoFlux/07.wav" data-page-node-id="Xi7pkT5bKcVZBXr6iRL0yd"></audio></td>
+                <td data-file="07.wav" data-page-node-id="OLeQ5jlNTVvdMdHiUWc2hL"><audio controls preload="metadata" src="static/audio/GT/07.wav" data-page-node-id="MRHqc5OzGV1Mx8H7PW9lBf"></audio></td>
               </tr>
-              <tr>
-                <td>Crackling firewood with a kettle whistling softly in the background.</td>
-                <td data-file="08.wav"><audio controls preload="metadata" src="static/audio/TinyAudio/08.wav"></audio></td>
-                <td data-file="08.wav"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/08.wav"></audio></td>
-                <td data-file="08.wav"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/08.wav"></audio></td>
-                <td data-file="08.wav"><audio controls preload="metadata" src="static/audio/TangoFlux/08.wav"></audio></td>
-                <td data-file="08.wav"><audio controls preload="metadata" src="static/audio/GT/08.wav"></audio></td>
+              <tr data-page-node-id="6dJginbU4tcym3xKNACbyi">
+                <td data-page-node-id="dPMcYT5lnZejqfUFg1Bkjy">Crackling firewood with a kettle whistling softly in the background.</td>
+                <td data-file="08.wav" data-page-node-id="xsnsUvYjung6SQBRc9LVZl"><audio controls preload="metadata" src="static/audio/TinyAudio/08.wav" data-page-node-id="pQH3YJsTDng01gOB0R0LRj"></audio></td>
+                <td data-file="08.wav" data-page-node-id="WjY7JAuSQ6ljLtQQiEWAr5"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/08.wav" data-page-node-id="XUvPDSq2KBrN6IjP5uHEEY"></audio></td>
+                <td data-file="08.wav" data-page-node-id="CwGbF4iyvLzREJKn5fXkWU"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/08.wav" data-page-node-id="YLLATqat6dCcoNG9mCfSFo"></audio></td>
+                <td data-file="08.wav" data-page-node-id="u3pDm2TzLtOo2kaF63KqjT"><audio controls preload="metadata" src="static/audio/TangoFlux/08.wav" data-page-node-id="0GUegN4gIGW9HmEBjHZLz0"></audio></td>
+                <td data-file="08.wav" data-page-node-id="pf7AUnLqR2Z34rA0QKzou2"><audio controls preload="metadata" src="static/audio/GT/08.wav" data-page-node-id="XSEtxVyeb3aYEiniK26VqF"></audio></td>
               </tr>
-              <tr>
-                <td>Typing on a mechanical keyboard, paper rustling, and a wall clock ticking in a quiet office.</td>
-                <td data-file="09.wav"><audio controls preload="metadata" src="static/audio/TinyAudio/09.wav"></audio></td>
-                <td data-file="09.wav"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/09.wav"></audio></td>
-                <td data-file="09.wav"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/09.wav"></audio></td>
-                <td data-file="09.wav"><audio controls preload="metadata" src="static/audio/TangoFlux/09.wav"></audio></td>
-                <td data-file="09.wav"><audio controls preload="metadata" src="static/audio/GT/09.wav"></audio></td>
+              <tr data-page-node-id="lTGzllF6eKjWxOGpEGsIZv">
+                <td data-page-node-id="GHgVVpOlKMnUiMUnZppHER">Typing on a mechanical keyboard, paper rustling, and a wall clock ticking in a quiet office.</td>
+                <td data-file="09.wav" data-page-node-id="NO9IKM0EThbHiHBFdtaLWW"><audio controls preload="metadata" src="static/audio/TinyAudio/09.wav" data-page-node-id="3Y0DhPOfJ4CUNx9ODlxymv"></audio></td>
+                <td data-file="09.wav" data-page-node-id="3k5PXR61t8NpDYMqCiBmrl"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/09.wav" data-page-node-id="ws4JUdDBhRGcW6EyDduEH7"></audio></td>
+                <td data-file="09.wav" data-page-node-id="Mia1BlEsHmEDtckNFqwLy5"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/09.wav" data-page-node-id="DWJH4IXLSByPy6SZRmpgsg"></audio></td>
+                <td data-file="09.wav" data-page-node-id="ocEv5MgYmU3UisrsfbfrO1"><audio controls preload="metadata" src="static/audio/TangoFlux/09.wav" data-page-node-id="fUlmNYU9xYTJ7okNH4duMf"></audio></td>
+                <td data-file="09.wav" data-page-node-id="H0svFYeDe8SXE3vylg37FB"><audio controls preload="metadata" src="static/audio/GT/09.wav" data-page-node-id="JSl4YcwHsgNtWvMuFwpAqA"></audio></td>
               </tr>
-              <tr>
-                <td>A few seconds of silence, then a single glass shatters on a hard floor.</td>
-                <td data-file="10.wav"><audio controls preload="metadata" src="static/audio/TinyAudio/10.wav"></audio></td>
-                <td data-file="10.wav"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/10.wav"></audio></td>
-                <td data-file="10.wav"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/10.wav"></audio></td>
-                <td data-file="10.wav"><audio controls preload="metadata" src="static/audio/TangoFlux/10.wav"></audio></td>
-                <td data-file="10.wav"><audio controls preload="metadata" src="static/audio/GT/10.wav"></audio></td>
+              <tr data-page-node-id="J045xsBKehjvWKtVcdgJ31">
+                <td data-page-node-id="lVCRH5i0jZX8VVUzJeQNuw">A few seconds of silence, then a single glass shatters on a hard floor.</td>
+                <td data-file="10.wav" data-page-node-id="DbPdkURqEIij2vzHCihmlv"><audio controls preload="metadata" src="static/audio/TinyAudio/10.wav" data-page-node-id="LCgEyCuVDJCBBh5rwCwIi4"></audio></td>
+                <td data-file="10.wav" data-page-node-id="vVEExjtjCpEzBicOtiZWTb"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/10.wav" data-page-node-id="4cW4PSNOncR3xBa3QtGkt5"></audio></td>
+                <td data-file="10.wav" data-page-node-id="rmEzDkATfoObd0xaQXTttd"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/10.wav" data-page-node-id="ke2Y5IfiEKRj8HfFJWPUN8"></audio></td>
+                <td data-file="10.wav" data-page-node-id="dVv0wPyJpYgHf9mzl5VDUR"><audio controls preload="metadata" src="static/audio/TangoFlux/10.wav" data-page-node-id="6BTYDi60RTOZMjDqKOVBFJ"></audio></td>
+                <td data-file="10.wav" data-page-node-id="XPdoo0NflqGOe67W2EpOJW"><audio controls preload="metadata" src="static/audio/GT/10.wav" data-page-node-id="nvrMDVFfpdShEMWCQrz75H"></audio></td>
               </tr>
             </tbody>
           </table>
@@ -342,15 +336,15 @@
 
 
 <!-- Overall architecture -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h2 class="title is-3" style="text-align: center; margin-bottom: 1rem; margin-left: 0; margin-right: 0">
-        <br>
+<section class="hero teaser" data-page-node-id="U4tRY2sNcYWfbWKob6EReS">
+  <div class="container is-max-desktop" data-page-node-id="Q9Ai3MInN2qprcftVzlrQG">
+    <div class="hero-body" data-page-node-id="a2MAQKdsfwhDx5RXSFU97y">
+      <h2 class="title is-3" style="text-align: center; margin-bottom: 1rem; margin-left: 0; margin-right: 0" data-page-node-id="SP2AaZsEF3fMJKIhSu6Z6i">
+        <br data-page-node-id="hX80976dGMZZIHQIJaihlh">
         Overall Architecture</h2>
-      <p>
-        <div class="content has-text-justified" style="margin: 0 0px;">
-          <br>
+      <p data-page-node-id="XRrjGqRlAAGIK3pQ8vcX9r">
+        <div class="content has-text-justified" style="margin: 0 0px;" data-page-node-id="8OKJDTvjNHdrdgzCE3UQGZ">
+          <br data-page-node-id="GJBepbeXYceW4YSikbLCNj">
           TA-DiT is TinyAudio's compact generative backbone. It removes two sources of repeated parameters in
           text-conditioned generative Transformers: separate modality-fusion modules and block-specific conditional
           modulation networks. Projected text tokens and noised audio latents are concatenated for joint self-attention,
@@ -361,9 +355,9 @@
           generator.
         </div>
       </p>
-      <div style="width: 100%; height: auto; margin: 0 auto;">
-        <br>
-        <img src="static/images/fig2_architecture.png" alt="Single-stream TA-DiT architecture" style="width: 100%; height: auto;">
+      <div style="width: 100%; height: auto; margin: 0 auto;" data-page-node-id="mHWJoKibCv6DOBLUxu24l3">
+        <br data-page-node-id="hAt4sXv4VDJ17ygjet24Gm">
+        <img src="static/images/fig2_architecture.png" alt="Single-stream TA-DiT architecture" style="width: 100%; height: auto;" data-page-node-id="rSIcZPcFN7Gp5C313iPaqe">
       </div>
 
     </div>
@@ -373,119 +367,119 @@
 
 
 <!-- Main results -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h2 class="title is-3" style="text-align: center; margin-bottom: 1rem; margin-left: 0; margin-right: 0">
-        <br>
+<section class="hero teaser" data-page-node-id="OQa1Nj15MkYypTgDmWQyd7">
+  <div class="container is-max-desktop" data-page-node-id="eWNJHSL9aF0xobxF7D6J2n">
+    <div class="hero-body" data-page-node-id="FXurPL8fCuxRSXLKCemzYY">
+      <h2 class="title is-3" style="text-align: center; margin-bottom: 1rem; margin-left: 0; margin-right: 0" data-page-node-id="nfKcGMo9JYUsKKGkG3EfEx">
+        <br data-page-node-id="dq5XXR5pltpc1cB93FhdZh">
         Main Results</h2>
-      <p>
-        <div class="content has-text-justified" style="margin: 0 0px;">
-          <br>
+      <p data-page-node-id="BB8tSkZtBkMWA8vaJ4CqTw">
+        <div class="content has-text-justified" style="margin: 0 0px;" data-page-node-id="2wbQfyVytSoakyISH4N6JX">
+          <br data-page-node-id="sXiFuSBqO1WFDAWGmfXpzL">
           TinyAudio attains an AudioCaps FAD of 2.65 with 0.48&nbsp;GB of peak GPU memory, more than 8&times; less than
           every compared system, and remains competitive in CU and PQ on TTA-Bench. TinyAudio-MF cuts sampling to a
           single function evaluation at a measurable quality trade-off.
         </div>
       </p>
 
-      <div class="results-wrap">
-        <table class="results-table">
-          <thead>
-            <tr>
-              <th rowspan="2">Model</th>
-              <th colspan="5">Footprint / Efficiency</th>
-              <th colspan="4">AudioCaps</th>
-              <th colspan="5">TTA-Bench</th>
+      <div class="results-wrap" data-page-node-id="8pc5AGwHyJ8qKEKtqEdzFM">
+        <table class="results-table" data-page-node-id="T9hFIfswQ0gu1PSE55pgZw">
+          <thead data-page-node-id="wpXtCG6K8sTNkXdJ3MoXwx">
+            <tr data-page-node-id="JXWG8emTqqXudtEAEKOM8w">
+              <th rowspan="2" data-page-node-id="gdQG7qETfPOGyLf6YI1PO9">Model</th>
+              <th colspan="5" data-page-node-id="BWdsWUoCYVzsSmXRRP8SWY">Footprint / Efficiency</th>
+              <th colspan="4" data-page-node-id="MtBe12WfShi5J7n9ombEhl">AudioCaps</th>
+              <th colspan="5" data-page-node-id="rrRul0qXR5GBX3AXdILmw3">TTA-Bench</th>
             </tr>
-            <tr>
-              <th>Gen.</th>
-              <th>Deploy.</th>
-              <th>Mem.</th>
-              <th>NFE</th>
-              <th>RTF</th>
-              <th>FAD&darr;</th>
-              <th>FD&darr;</th>
-              <th>KL&darr;</th>
-              <th>IS&uarr;</th>
-              <th>CE&uarr;</th>
-              <th>CU&uarr;</th>
-              <th>PC&uarr;</th>
-              <th>PQ&uarr;</th>
-              <th>CLAP&uarr;</th>
+            <tr data-page-node-id="UyXDWyML6KhPiiiAR26L6z">
+              <th data-page-node-id="Xz0iQHh9e4ZHAF0jR4LhqM">Gen.</th>
+              <th data-page-node-id="bxDnMPTmDA7nxUNJgB16xY">Deploy.</th>
+              <th data-page-node-id="yT3CSt3cIcSbWpcr057Jvd">Mem.</th>
+              <th data-page-node-id="JIhV5FoPyVwk9bVDpCNgTT">NFE</th>
+              <th data-page-node-id="QzoRWynUmur8UjiIQzBZKo">RTF</th>
+              <th data-page-node-id="bDTS6WtkRGsPxQZWfb4VW3">FAD&darr;</th>
+              <th data-page-node-id="wf9NgUu8uaLDwkOetK4iYZ">FD&darr;</th>
+              <th data-page-node-id="hRCCA7iSCanJVT8WhBQax6">KL&darr;</th>
+              <th data-page-node-id="zcF16jsIjDBWMXgYGEMG0e">IS&uarr;</th>
+              <th data-page-node-id="gGkFjr0JF1cI4nHPa3X7Sq">CE&uarr;</th>
+              <th data-page-node-id="imDOmEORxlD9e3c1a8qJP4">CU&uarr;</th>
+              <th data-page-node-id="Jekg7rc3LyEzVg31qJRWdU">PC&uarr;</th>
+              <th data-page-node-id="maaNm1mS3h7kg8CoSOxX0b">PQ&uarr;</th>
+              <th data-page-node-id="O5IyzpwDmoBS4zOhrHiuFS">CLAP&uarr;</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>AudioLDM-L-Full</td>
-              <td>739M</td><td>953M</td><td>3.89 GB</td><td>200&times;2</td><td>1.190</td>
-              <td>4.32</td><td>29.50</td><td>1.68</td><td>8.17</td>
-              <td>3.275</td><td>5.137</td><td>3.219</td><td>5.854</td><td>0.441</td>
+          <tbody data-page-node-id="Bo4vjcu0iRacUqpgdOiRnk">
+            <tr data-page-node-id="jXHuwIQyikM94Fynxi1oqS">
+              <td data-page-node-id="4MWGWH0ucImm6dNUGyf1e2">AudioLDM-L-Full</td>
+              <td data-page-node-id="SgF7Q0EGP1Nv3XIJVBfHOd">739M</td><td data-page-node-id="5CcEv0XqUpP5tcmduyfpCa">953M</td><td data-page-node-id="yQGAV0bc8IzLhcnYOx7j5M">3.89 GB</td><td data-page-node-id="BH6D2oliCdrklXedv504ux">200&times;2</td><td data-page-node-id="CIaKcJ9xhUG1SQmMq7uyXi">1.190</td>
+              <td data-page-node-id="d5rP7ow8hx3oAOCXFEyhZs">4.32</td><td data-page-node-id="A4z3Z9M8UeHAA0sBgAi8x3">29.50</td><td data-page-node-id="pFHn4Drd0rqkCc7JvTFvDK">1.68</td><td data-page-node-id="lTFjaNolde0RLsCdk4gpwj">8.17</td>
+              <td data-page-node-id="Po1OE2ygQ7vEQtbBijsMmH">3.275</td><td data-page-node-id="AnBzZCig0roGSpXV8VE27i">5.137</td><td data-page-node-id="YlyAPmYN6OzuCoN5S3sF6y">3.219</td><td data-page-node-id="QFKvFtzsSlOu3AjOFpBFvE">5.854</td><td data-page-node-id="m6EMD7JNqpfe9S0Q6KzvDv">0.441</td>
             </tr>
-            <tr>
-              <td>AudioLDM2-Large</td>
-              <td>718M</td><td>1467M</td><td>5.93 GB</td><td>200&times;2</td><td>4.173</td>
-              <td>3.45</td><td>25.53</td><td>1.65</td><td>7.98</td>
-              <td>3.441</td><td><span class="best">5.440</span></td><td>2.957</td><td>5.984</td><td>0.415</td>
+            <tr data-page-node-id="BGNsvPk7PxhYNK7oObdMoA">
+              <td data-page-node-id="r7B0WJKNzVGnwCB6p5rOM4">AudioLDM2-Large</td>
+              <td data-page-node-id="g6lDi9uF8EIC0dzpVlfIkP">718M</td><td data-page-node-id="05Gi5JNVelVsfidaV3Lmw7">1467M</td><td data-page-node-id="GQE5vRghrGpkI1KFBCoRNg">5.93 GB</td><td data-page-node-id="2P6m74lwrw1Rm9bXLNJ7E9">200&times;2</td><td data-page-node-id="S5ZH8mc1ACbs9cd6lRzxrA">4.173</td>
+              <td data-page-node-id="32MAzG4d0VVPZE6hyJIQDr">3.45</td><td data-page-node-id="gpzCKoVU7Imk55pAfzm9iB">25.53</td><td data-page-node-id="lq1gan37YCOYwpGEPXE1uo">1.65</td><td data-page-node-id="eKuoejDKWgPD1KJD7rAUtZ">7.98</td>
+              <td data-page-node-id="n6b9HUYQ6moDHkDN01VvYX">3.441</td><td data-page-node-id="z0CeL9CrtMmuwb7e5Zo6ge"><span class="best" data-page-node-id="IyvxGDt8Eibxx03DaXLXJH">5.440</span></td><td data-page-node-id="SXzRy6FH1A8Bns4AIJc5D2">2.957</td><td data-page-node-id="BHQCTnGNwVDRf5PyKCPXPA">5.984</td><td data-page-node-id="qLcPbQ40SF6YXUL61DGbJ8">0.415</td>
             </tr>
-            <tr>
-              <td>Tango-Full</td>
-              <td>866M</td><td>1295M</td><td>5.28 GB</td><td>200&times;2</td><td>1.880</td>
-              <td>2.68</td><td>15.64</td><td>1.24</td><td>8.78</td>
-              <td>3.264</td><td>5.151</td><td>3.360</td><td>5.954</td><td>0.440</td>
+            <tr data-page-node-id="Gign2dlJQr2EFm3d9Q24Ad">
+              <td data-page-node-id="usqwAGfR57xdw5q9BQYjyU">Tango-Full</td>
+              <td data-page-node-id="kFVjhCFUzB4ThHzGsjbdhw">866M</td><td data-page-node-id="vXhB7ZDJ795N0LYg7PIvS7">1295M</td><td data-page-node-id="yeMj1GBHjh7fBKMoUz48gq">5.28 GB</td><td data-page-node-id="A77QYadYFr2Kgx100tH8xz">200&times;2</td><td data-page-node-id="ZsEATYHYOsvOp8AzD77sXY">1.880</td>
+              <td data-page-node-id="riG91lKiSDhECq7V3SCrNE">2.68</td><td data-page-node-id="vUNcAFFsS7bT51cmXLxxgw">15.64</td><td data-page-node-id="QMc62UoX75FoBItp6i3JSa">1.24</td><td data-page-node-id="PfCf33pCHS7hcRDj7GuIFs">8.78</td>
+              <td data-page-node-id="IhyHbApXQnK4VBWTMf2yhH">3.264</td><td data-page-node-id="WWGaKzGkXuBfvL51ipN0Gp">5.151</td><td data-page-node-id="c1wR28ofNQ9UaLhLD4DfjB">3.360</td><td data-page-node-id="lFFA5i1U2bJIa62NyA3iM5">5.954</td><td data-page-node-id="omqCiwTZVrXHvHHYnkQFAt">0.440</td>
             </tr>
-            <tr>
-              <td>Tango-2-Full</td>
-              <td>866M</td><td>1295M</td><td>5.28 GB</td><td>200&times;2</td><td>1.879</td>
-              <td>2.87</td><td>15.93</td><td><span class="best">1.20</span></td><td>10.05</td>
-              <td>3.468</td><td>5.196</td><td><span class="best">3.800</span></td><td>5.895</td><td>0.467</td>
+            <tr data-page-node-id="qv0MCwRAfrQKWJcKhl0VQC">
+              <td data-page-node-id="mcxA5sggdea8gOSAboYe0g">Tango-2-Full</td>
+              <td data-page-node-id="IMDLiB3rplnD1s6NrHSdYs">866M</td><td data-page-node-id="DUxhwnkicQESEzPYIhICf5">1295M</td><td data-page-node-id="Z1MGyt8skZ7knObmjx9ibX">5.28 GB</td><td data-page-node-id="cuUBQW9N7ao5f1qj91DFVH">200&times;2</td><td data-page-node-id="KB4JKkxM6vbpE2MX7D7FQu">1.879</td>
+              <td data-page-node-id="PDGGq1rym5bUBvsmJuRRru">2.87</td><td data-page-node-id="Fdmee1A1C6aI6CskpOggcX">15.93</td><td data-page-node-id="iyZ4GSsqwR1HfdwAIpu0vm"><span class="best" data-page-node-id="bcfvKgFrwYv6HpcDjQgF6T">1.20</span></td><td data-page-node-id="uFpzYqPJKpT3WkCPFHdDUg">10.05</td>
+              <td data-page-node-id="fy4nZe8XFIg7Qh1TWUfhZi">3.468</td><td data-page-node-id="FmKstMzzDCSppUyhkUm420">5.196</td><td data-page-node-id="Iw2qMqY2opkmOaHe8Iyoq6"><span class="best" data-page-node-id="N2zEMif6DRM8VWgQX7aLgV">3.800</span></td><td data-page-node-id="GaOH2bzGS1J4cF5osvcewZ">5.895</td><td data-page-node-id="oOQAnsC7lR5bZpeeZQqqTV">0.467</td>
             </tr>
-            <tr>
-              <td>MeanAudio-L-Full</td>
-              <td>480M</td><td>1032M</td><td>4.79 GB</td><td>25</td><td><span class="second">0.057</span></td>
-              <td>2.59</td><td><span class="best">14.06</span></td><td><span class="second">1.21</span></td><td><span class="second">12.46</span></td>
-              <td>3.304</td><td>5.151</td><td>2.995</td><td>5.743</td><td>0.469</td>
+            <tr data-page-node-id="HOzwVNElzmbGHxD5k2SAgP">
+              <td data-page-node-id="83be4asEVicsIXzeDPreQ2">MeanAudio-L-Full</td>
+              <td data-page-node-id="UG5BTLKx3xnGvhJgAIsroq">480M</td><td data-page-node-id="YEqLS5bjdWJcfskGcyj07y">1032M</td><td data-page-node-id="hmXbX9BS8N1jBiTOh3kW1Q">4.79 GB</td><td data-page-node-id="2d3jGDN55LP8zhn8mHnTbS">25</td><td data-page-node-id="wCFQa95PbQhPemrOVyKbWe"><span class="second" data-page-node-id="AmRocRJW11nABaoJMHV93C">0.057</span></td>
+              <td data-page-node-id="UQ6313FuyffK2ziIs5eznJ">2.59</td><td data-page-node-id="7sJXWnviZDHDbmsKhg90Wo"><span class="best" data-page-node-id="GVz8wK5LgRTfryolRYfCrk">14.06</span></td><td data-page-node-id="ehzgSS0LWqlKCU9wV0BpWs"><span class="second" data-page-node-id="8rLRRIozvYYvxWHJf3ZwWF">1.21</span></td><td data-page-node-id="jlt1GMNmJR9IBz76ATGMHu"><span class="second" data-page-node-id="4AuUSAF95DChFii44zPonY">12.46</span></td>
+              <td data-page-node-id="FfFlWimps84B9juG2r1Rfk">3.304</td><td data-page-node-id="Ba5w7cCjOgHaxirpr6xtqm">5.151</td><td data-page-node-id="Yq2FwEGXnmpucsSIMfLr6R">2.995</td><td data-page-node-id="mRs2s0tBEBlq0ppzXduODK">5.743</td><td data-page-node-id="OuhmkSND4FY7zDnQsVkzST">0.469</td>
             </tr>
-            <tr>
-              <td>EzAudio-XL</td>
-              <td>857M</td><td>2120M</td><td>8.61 GB</td><td>200&times;2</td><td>1.896</td>
-              <td>3.64</td><td>14.98</td><td>1.29</td><td>11.38</td>
-              <td>3.388</td><td>5.055</td><td>3.663</td><td>5.719</td><td>0.446</td>
+            <tr data-page-node-id="QPNJ70ghikbGSCCA4fbSdN">
+              <td data-page-node-id="4wTTT1Kvr8uPtLvbG08Lq9">EzAudio-XL</td>
+              <td data-page-node-id="L1SEWs263espEgqXCqH2tw">857M</td><td data-page-node-id="dCyhUHSoBFuHWPBXc3og7G">2120M</td><td data-page-node-id="hSgkOHcC5EzMLx6UEKefTz">8.61 GB</td><td data-page-node-id="qDHcKNGrZrI7doYqDWy95C">200&times;2</td><td data-page-node-id="vMPX4JyAOZKWHn48NLt4TY">1.896</td>
+              <td data-page-node-id="FHexKnexaTmauG04fF0byg">3.64</td><td data-page-node-id="MiyWKq5DA4wU3rGHDQIizE">14.98</td><td data-page-node-id="GU63sbpj3DDzQoEMdtzyff">1.29</td><td data-page-node-id="pDHGjpSpGzq9XGegHOzwbF">11.38</td>
+              <td data-page-node-id="9tuqpk8uWVuVU1i4UAQfq4">3.388</td><td data-page-node-id="RgLWkpiZjHBjZPYU3v6EKu">5.055</td><td data-page-node-id="UOxCYCyPow3Z86lLUJ0HEf">3.663</td><td data-page-node-id="6fO9cxAm8xlrGfr6XT9qYd">5.719</td><td data-page-node-id="CqK3lm4T80UuXpEccjSdp5">0.446</td>
             </tr>
-            <tr>
-              <td>GenAU-L-Full</td>
-              <td>1253M</td><td>2031M</td><td>18.54 GB</td><td>200&times;2</td><td>0.937</td>
-              <td><span class="best">2.07</span></td><td><span class="second">14.58</span></td><td>1.36</td><td>10.43</td>
-              <td>3.359</td><td>5.096</td><td>3.584</td><td>5.802</td><td>0.468</td>
+            <tr data-page-node-id="gvj1B12B5ExykyKCcyQOb4">
+              <td data-page-node-id="DUQjf1aVjVZ5vo2NjdvUza">GenAU-L-Full</td>
+              <td data-page-node-id="3yPvI3dTiEySIlEvFVZPQd">1253M</td><td data-page-node-id="2D83hD69ThF0SE1YKqLQ9K">2031M</td><td data-page-node-id="OxobJK3tY1VNoSt7v8s3rb">18.54 GB</td><td data-page-node-id="OsyZM3kxMJnXGReFbpJXOb">200&times;2</td><td data-page-node-id="iRFK9ZboLF4hT1ksYcLYiS">0.937</td>
+              <td data-page-node-id="7U9mnD4H0QeGp2eCsqw3uH"><span class="best" data-page-node-id="LnlF7HrUGAnLqZc84A4qEX">2.07</span></td><td data-page-node-id="o9xZKEoiq6udmazKeFCe6Z"><span class="second" data-page-node-id="9lC82dRRlQDlELLkJAFeDi">14.58</span></td><td data-page-node-id="cnE50xJKD2sy7hKPA5dX7u">1.36</td><td data-page-node-id="F2O5thN67qIUWSKhavnCco">10.43</td>
+              <td data-page-node-id="v3vXDgB6GnJZzmxFb5kG2s">3.359</td><td data-page-node-id="u42xDRspoV9IlBSgoDDUoE">5.096</td><td data-page-node-id="TuSfMM54L6IT1bvSHFT2dy">3.584</td><td data-page-node-id="GodqVoFGxuK6GxyQSoz7kD">5.802</td><td data-page-node-id="v45CsjLRhpbDPmHtTznWqe">0.468</td>
             </tr>
-            <tr>
-              <td>TangoFlux</td>
-              <td>516M</td><td><span class="second">937M</span></td><td>6.99 GB</td><td>50&times;2</td><td>0.257</td>
-              <td>2.41</td><td>20.65</td><td>1.27</td><td><span class="best">12.81</span></td>
-              <td><span class="best">3.539</span></td><td>5.074</td><td><span class="second">3.673</span></td><td>5.782</td><td><span class="second">0.472</span></td>
+            <tr data-page-node-id="Xl3FYVypv1bxqCt7zNby6s">
+              <td data-page-node-id="983eDZkSxDZ9irm0V0kZfD">TangoFlux</td>
+              <td data-page-node-id="Q2DIb42zHNS5iFYYZAktZs">516M</td><td data-page-node-id="CDrsQaNwPYlPwbc7gHo6Xf"><span class="second" data-page-node-id="4HTx1wsB2yJD35BwHd2kWL">937M</span></td><td data-page-node-id="gYb9gZltD2jCNWYlceUDUv">6.99 GB</td><td data-page-node-id="4cheOHkh8Fb6xpE1Qyv0Io">50&times;2</td><td data-page-node-id="KSK7zPPukvRY4VSdiaTzsZ">0.257</td>
+              <td data-page-node-id="N8avdLLsafS4sSgHXKsoaR">2.41</td><td data-page-node-id="ew3qq2bHYl7FLwx7j3pHA9">20.65</td><td data-page-node-id="CIvqMm08Jn5s2plAvUi1in">1.27</td><td data-page-node-id="79a6jHbZT2LU93aqVnFoER"><span class="best" data-page-node-id="ZNIgQQiDVVFsRssiERwglK">12.81</span></td>
+              <td data-page-node-id="H8fRiFcE2z0aTysEqHAsT9"><span class="best" data-page-node-id="l6q2wLxQbioFLUrnbVfQkf">3.539</span></td><td data-page-node-id="0n4ldTPHzthv9HGgAskECL">5.074</td><td data-page-node-id="CT5CBeq8gZYOmbn2GpolmD"><span class="second" data-page-node-id="2soqHVuBCm7kekLsw4jVkD">3.673</span></td><td data-page-node-id="Hhlh0pnk63i0EsYHaN06D5">5.782</td><td data-page-node-id="1JKgqriBUAbFRJiUAlM2cE"><span class="second" data-page-node-id="VsX9L8BqKAHgIvYn9XsnCB">0.472</span></td>
             </tr>
-            <tr>
-              <td>Resonate</td>
-              <td><span class="second">470M</span></td><td>1108M</td><td>5.13 GB</td><td>25&times;2</td><td>0.273</td>
-              <td><span class="second">2.27</span></td><td>15.53</td><td>1.31</td><td>10.79</td>
-              <td>3.451</td><td><span class="second">5.328</span></td><td>3.232</td><td><span class="best">6.064</span></td><td><span class="best">0.476</span></td>
+            <tr data-page-node-id="pX3AkYcp09KWYTfmmXkMNZ">
+              <td data-page-node-id="btRZOzBA7gbgQhjveIhOZj">Resonate</td>
+              <td data-page-node-id="OSPxFXCTrlkkvCS6qm1g2d"><span class="second" data-page-node-id="QHUZuY7YaAlLHXZ9eHZqxv">470M</span></td><td data-page-node-id="H6TVOX6f55gKEqqPA1qsLD">1108M</td><td data-page-node-id="D7PMNX4xFB8AJ3JudqVh9v">5.13 GB</td><td data-page-node-id="PxQCdOD36odlf6zfFqyADp">25&times;2</td><td data-page-node-id="vHUVsajciev4kqpRX1xRfA">0.273</td>
+              <td data-page-node-id="r7A4LGSBpyXvG38QOXGdXX"><span class="second" data-page-node-id="vDnTygBl3gnMZlSZXivWTU">2.27</span></td><td data-page-node-id="4VVxxwkWvLXEeYCSB37fh6">15.53</td><td data-page-node-id="4o1i21vEPLIP20goAX26Fh">1.31</td><td data-page-node-id="ENzXHMSn9QGBbjLxcy7O76">10.79</td>
+              <td data-page-node-id="5E0C9cK2BtRFdN0g6CFonW">3.451</td><td data-page-node-id="ekGNXhp7mtXdm9o2O6mYoT"><span class="second" data-page-node-id="J7MyqtJBZ6YWaxBl3bQ4FD">5.328</span></td><td data-page-node-id="ahNH815jlkogZFF8gDPqr8">3.232</td><td data-page-node-id="HvRAbVkLw5gdLLjHZgEPDV"><span class="best" data-page-node-id="OOblHLBqdad8YDd28OOC7g">6.064</span></td><td data-page-node-id="VUXEK2CbNKHGeQ45gclXYa"><span class="best" data-page-node-id="fBU4gWOuGTbuBuUrGSE6Qh">0.476</span></td>
             </tr>
-            <tr class="ours">
-              <td>TinyAudio</td>
-              <td><span class="best">35M</span></td><td><span class="best">87M</span></td><td><span class="best">0.48 GB</span></td><td>25&times;2</td><td>0.078</td>
-              <td>2.65</td><td>18.24</td><td>1.32</td><td>10.44</td>
-              <td>3.343</td><td>5.262</td><td>2.983</td><td><span class="second">5.996</span></td><td>0.429</td>
+            <tr class="ours" data-page-node-id="wHNw5wBFZi5Vhgr9CsBRbQ">
+              <td data-page-node-id="sMhBNAoHmCO3p0DffrjJgN">TinyAudio</td>
+              <td data-page-node-id="HCQMQL1TU3kGpbo0gPNEEf"><span class="best" data-page-node-id="O12EeYEex4Fpsg6pbY17CU">35M</span></td><td data-page-node-id="BJplwaHhJSOy6EJF1nCUzH"><span class="best" data-page-node-id="5yU71IIS3s5hcLTCuLnN5E">87M</span></td><td data-page-node-id="caR0i1Ohjdxy4SlwnPQpZj"><span class="best" data-page-node-id="85uRs5YNEEfKcdGduNGf22">0.48 GB</span></td><td data-page-node-id="95cKcuQ2rejctlDXxBynOD">25&times;2</td><td data-page-node-id="R7aTszvWgKVbxSewQjGbf8">0.078</td>
+              <td data-page-node-id="iRXB1uSQkHQBHFZuYPhjqa">2.65</td><td data-page-node-id="vc1BGseq6Z5yzUASgGQ5Gy">18.24</td><td data-page-node-id="QhKH0rSC6FI6lrYVFACk7W">1.32</td><td data-page-node-id="RzZZ4Mxu2DEBlV4n5XrHgk">10.44</td>
+              <td data-page-node-id="fqGNfwCFYeHLkjnMZQvkGi">3.343</td><td data-page-node-id="Z1m3GUCxmcoKgIU4MbyO01">5.262</td><td data-page-node-id="WVTt4r5hrzPCcMGm5sB9qD">2.983</td><td data-page-node-id="kD2JMcPGn5Eenmt4N8d52s"><span class="second" data-page-node-id="CujF0HYU2NXYmPQbNdMux2">5.996</span></td><td data-page-node-id="kirEXiT49QkEzOGaEtVZo5">0.429</td>
             </tr>
-            <tr class="ours">
-              <td>TinyAudio-MF</td>
-              <td><span class="best">35M</span></td><td><span class="best">87M</span></td><td><span class="best">0.48 GB</span></td><td>1</td><td><span class="best">0.010</span></td>
-              <td>2.83</td><td>23.65</td><td>1.49</td><td>8.47</td>
-              <td>3.350</td><td>5.257</td><td>3.043</td><td>5.994</td><td>0.403</td>
+            <tr class="ours" data-page-node-id="CXcZ7iEjDV1Ra6WMx8E62E">
+              <td data-page-node-id="MX7vxe9qmpf2SvkrhbrrKd">TinyAudio-MF</td>
+              <td data-page-node-id="ql0GAtamLeTpasZwmQU8dR"><span class="best" data-page-node-id="TrrVXr0C8ib6wu8d9gUH0W">35M</span></td><td data-page-node-id="biiLELEsoBIwQAH4TaUo9w"><span class="best" data-page-node-id="OBnVcfPbKzkKiFCwawSHBb">87M</span></td><td data-page-node-id="Dlhr2WMcVIVDV2nCEx7utK"><span class="best" data-page-node-id="r57HrWGI8vAI0PKNnDBjSJ">0.48 GB</span></td><td data-page-node-id="7GpqfZyvxqiO8IaMCGmT3C">1</td><td data-page-node-id="tvFD12IMDzy27UJdobk7qi"><span class="best" data-page-node-id="RhfdPZfYnYOcp3ESgCEWCl">0.010</span></td>
+              <td data-page-node-id="kPDe7uLI0QU1XqZyVQbakF">2.83</td><td data-page-node-id="2vyNM32B7tGYYnXtEAZDyI">23.65</td><td data-page-node-id="6xgFXAKCdVPWAXtFB7vXO7">1.49</td><td data-page-node-id="hffPA0D4DIUDPY20aW4WHJ">8.47</td>
+              <td data-page-node-id="WGbSLexNQ9YG641yyuATq6">3.350</td><td data-page-node-id="npUFD6QMgHha5g5GJPkDZP">5.257</td><td data-page-node-id="y5ZVTqVvDp4V3hDICGVE2a">3.043</td><td data-page-node-id="qYOuL6H07tRBEfwXjapxeU">5.994</td><td data-page-node-id="sz069nXKlzDp6xS4PkRwHV">0.403</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="results-note">
-        <strong>Bold</strong> and <span style="text-decoration: underline;">underline</span> indicate best and second-best results.
+      <p class="results-note" data-page-node-id="Sg6I0ijjCzpfxnfGCIafBx">
+        <strong data-page-node-id="zl6Oz9Ygdx6V3gAyRjLZhM">Bold</strong> and <span style="text-decoration: underline;" data-page-node-id="y9BsBWvSV1h1X8n60kJE9t">underline</span> indicate best and second-best results.
         Mem. and RTF are measured on a single GPU in FP32 with batch size 1. TTA-Bench results use the Accuracy subset.
       </p>
 
@@ -495,14 +489,14 @@
 <!-- End main results -->
 
 
-<footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
+<footer class="footer" data-page-node-id="P5e1GqfWoJW5WreBHQCiCK">
+  <div class="container" data-page-node-id="e8KqHSGAKFtB41ghvgu4tR">
+    <div class="columns is-centered" data-page-node-id="sHDKBhNIlkLQwKbJ4YednJ">
+      <div class="column is-8" data-page-node-id="dvDWrQdwxllFvRBDDqPDMH">
+        <div class="content" data-page-node-id="5BoqI33XoOjGHxXU7VVQLV">
 
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+          <p data-page-node-id="ipmZsPD7h6dlLNyqeuXAxi">
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" data-page-node-id="E0IEDuxjDOCbzKEglei2Dc">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank" data-page-node-id="svphlXNcnqNsQ3s8TZIUhg">Nerfies</a> project page.
           </p>
 
         </div>
