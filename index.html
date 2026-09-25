@@ -1,132 +1,534 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-<title>TinyAudio</title>
-<meta name="description" content="Project page for TinyAudio.">
+  <meta name="description" content="TinyAudio: Compact and Efficient Text-to-Audio Generation for Low-Resource Deployment">
+  <meta property="og:title" content="TinyAudio: Compact and Efficient Text-to-Audio Generation for Low-Resource Deployment"/>
+  <meta property="og:description" content="A compact flow-matching text-to-audio model with 87M inference-time parameters and 0.48 GB peak GPU memory."/>
+  <meta property="og:url" content="https://tinyaudio-project.github.io/"/>
+  <meta property="og:image" content="static/images/og.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
 
-<meta name="citation_title" content="TinyAudio">
-<meta name="citation_author" content="Author One">
-<meta name="citation_publication_date" content="2026">
-<meta name="citation_pdf_url" content="#">
+  <meta name="twitter:title" content="TinyAudio">
+  <meta name="twitter:description" content="A compact flow-matching text-to-audio model with 87M inference-time parameters and 0.48 GB peak GPU memory.">
+  <meta name="twitter:image" content="static/images/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="text-to-audio generation, compact generative models, flow matching, low-resource deployment">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="TinyAudio">
-<meta property="og:description" content="Project page for TinyAudio.">
-<meta property="og:image" content="assets/img/og.png">
+  <title>TinyAudio</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
 
-<style>
-:root {
-  --fg: #111111;
-  --fg2: #575757;
-  --fg3: #8e8e8e;
-  --line: #e6e6e6;
-  --accent: #185fa5;
-  --bg: #ffffff;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --fg: #ededed;
-    --fg2: #b0b0b0;
-    --fg3: #8a8a8a;
-    --line: #2e2e2e;
-    --accent: #85b7eb;
-    --bg: #111111;
-  }
-}
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--fg);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-  font-size: 15px;
-  line-height: 1.75;
-  font-weight: 400;
-}
-.wrap { max-width: 720px; margin: 0 auto; padding: 96px 24px 120px; }
-h1 { font-size: 27px; font-weight: 500; line-height: 1.35; letter-spacing: -0.01em; margin: 0 0 20px; }
-h2 { font-size: 14px; font-weight: 500; margin: 0 0 18px; }
-p { margin: 0 0 16px; }
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
-.muted { color: var(--fg3); }
-.authors { font-size: 15px; color: var(--fg2); margin: 0 0 6px; }
-.affil { font-size: 13px; color: var(--fg3); margin: 0 0 26px; }
-.links { font-size: 14px; color: var(--fg3); margin: 0 0 4px; }
-.links span { margin: 0 8px; color: var(--line); }
-section { border-top: 1px solid var(--line); padding-top: 34px; margin-top: 56px; }
-.abstract { color: var(--fg2); }
-.slot {
-  display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
-  border: 1px dashed var(--line); border-radius: 6px;
-  padding: 14px 16px; margin-bottom: 10px;
-  font-size: 13px; color: var(--fg3);
-}
-.slot b { font-weight: 400; color: var(--fg2); }
-pre {
-  margin: 0; padding: 18px 20px; overflow-x: auto;
-  border: 1px solid var(--line); border-radius: 6px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 12px; line-height: 1.7; color: var(--fg2);
-}
-footer { border-top: 1px solid var(--line); margin-top: 56px; padding-top: 34px; font-size: 13px; color: var(--fg3); }
-</style>
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <style>
+    .audio-table {
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      border-collapse: collapse;
+    }
+    .audio-table th,
+    .audio-table td {
+      border-left: none !important;
+      border-right: none !important;
+    }
+    .audio-table th:not(:first-child),
+    .audio-table td:not(:first-child) {
+      border-left: none !important;
+    }
+    .audio-table.is-bordered th,
+    .audio-table.is-bordered td {
+      border-left: none !important;
+      border-right: none !important;
+    }
+    .audio-table th {
+      text-align: center !important;
+      vertical-align: middle;
+      background-color: #f5f5f5;
+      font-weight: bold;
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+    .audio-table td:first-child {
+      text-align: left;
+      vertical-align: middle;
+      width: 30%;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      padding-left: 15px;
+    }
+    .audio-table td:not(:first-child) {
+      text-align: center;
+      vertical-align: middle;
+      width: 14%;
+    }
+    .audio-table audio {
+      width: 100%;
+      height: 30px;
+      max-width: 150px;
+    }
+    .audio-table tbody tr {
+      background-color: #f5f5f5 !important;
+    }
+    .audio-table tbody tr:hover {
+      background-color: #f0f8ff !important;
+    }
+
+    /* 音频占位：文件缺失时隐藏播放器，改显示期望文件名 */
+    .audio-table td.is-placeholder audio { display: none; }
+    .audio-table td.is-placeholder::after {
+      content: attr(data-file);
+      display: block;
+      border: 1px dashed #d5d5d5;
+      border-radius: 4px;
+      padding: 7px 4px;
+      background: #fbfbfb;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.66rem;
+      line-height: 1.3;
+      color: #a8a8a8;
+      word-break: break-all;
+    }
+
+    /* 主结果表格 */
+    .results-wrap { overflow-x: auto; margin: 0 auto 2rem; }
+    .results-table {
+      font-size: 0.8rem;
+      border-collapse: collapse;
+      width: 100%;
+      white-space: nowrap;
+    }
+    .results-table th,
+    .results-table td {
+      border: 1px solid #e4e4e4;
+      padding: 6px 8px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .results-table th { background: #f5f5f5; font-weight: 600; }
+    .results-table td:first-child,
+    .results-table th:first-child { text-align: left; }
+    .results-table tbody tr:nth-child(even) { background: #fafafa; }
+    .results-table .best { font-weight: 700; }
+    .results-table .second { text-decoration: underline; text-underline-offset: 2px; }
+    .results-table tbody tr.ours td { background: #f3f7fc; }
+    .results-note { font-size: 0.8rem; color: #8a8a8a; text-align: center; margin-top: -1.2rem; margin-bottom: 2.4rem; }
+    .ph-note { font-size: 0.85rem; color: #9a9a9a; margin-bottom: 1rem; }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-
 <body>
-<div class="wrap">
 
-<h1>TinyAudio: <span class="muted">paper subtitle goes here</span></h1>
 
-<p class="authors">
-  <a href="#">Author One</a>, <a href="#">Author Two</a>, <a href="#">Author Three</a>
-</p>
-<p class="affil">Affiliation One &middot; Affiliation Two</p>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
 
-<p class="links">
-  <a href="#">Paper</a><span>|</span>
-  <a href="#">arXiv</a><span>|</span>
-  <a href="#">Code</a><span>|</span>
-  <a href="#samples">Audio samples</a>
-</p>
+            <h1 class="title is-2 publication-title" style="margin-left: -25px; margin-right: -25px; font-size: 2.1rem;">TinyAudio: Compact and Efficient Text-to-Audio Generation for Low-Resource Deployment</h1>
+            <div class="is-size-6 publication-authors">
+              <span class="author-block">Junxi Liu<sup>1,2</sup>,</span>
+              <span class="author-block">Xiquan Li<sup>1,3</sup>,</span>
+              <span class="author-block">Wenhao Guan<sup>2</sup>,</span>
+              <span class="author-block">Yifan Duan<sup>1,2</sup>,</span>
+              <span class="author-block">Zhikang Niu<sup>1,2</sup>,</span>
+              <span class="author-block">Yanru Huo<sup>1</sup>,</span>
+              <span class="author-block">Ziyang Ma<sup>1,2,4</sup>,</span>
+              <span class="author-block">Xie Chen<sup>1,2,*</sup></span>
+            </div>
 
-<section>
-  <h2>Abstract</h2>
-  <p class="abstract">
-    Abstract placeholder. Replace this paragraph with the paper abstract.
-  </p>
+            <div class="is-size-6 publication-authors">
+              <span class="author-block">
+                <sup>1</sup>X-LANCE Lab, Shanghai Jiao Tong University &nbsp;&middot;&nbsp;
+                <sup>2</sup>Shanghai Innovation Institute<br>
+                <sup>3</sup>SJTU Paris Elite Institute of Technology &nbsp;&middot;&nbsp;
+                <sup>4</sup>Nanyang Technological University
+              </span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding author</small></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Paper / arXiv：投稿中，链接待补 -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/junxi25liu/TinyAudio" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#samples" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-headphones"></i></span>
+                    <span>Audio samples</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Overall performance -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+
+      <div style="width: 85%; height: auto; margin: 0 auto;">
+        <img src="static/images/fig1_teaser.png" alt="AudioCaps quality versus generator size" style="width: 100%; height: auto;">
+      </div>
+
+      <p>
+        <div class="content has-text-justified" style="margin: 0 0;">
+          <br>
+          TinyAudio is a compact flow-matching text-to-audio model that generates 44.1&nbsp;kHz audio with only
+          <strong>87M</strong> inference-time parameters &mdash; over 90% fewer than representative billion-parameter
+          pipelines &mdash; and 0.48&nbsp;GB of peak GPU memory. Its core TA-DiT jointly models text and audio tokens
+          in a single stream with layer-shared conditional modulation, while TA-CLAP provides audio-aligned text
+          conditioning. TinyAudio-MF, trained with the Improved Mean Flows objective, reduces latent generation from
+          25 Euler steps to a single step, enabling real-time generation under a four-core CPU quota.
+          <br>
+        </div>
+      </p>
+
+    </div>
+  </div>
 </section>
+<!-- End overall performance -->
 
-<section>
-  <h2>Overview</h2>
-  <div class="slot"><b>Figure 1</b><em>assets/img/teaser.png &mdash; not added yet</em></div>
+
+<!-- Audio samples -->
+<section class="section hero is-light" id="samples">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-fullwidth">
+        <h2 class="title is-3">Audio Generation Samples</h2>
+        <br>
+        <p class="ph-note">Audio files have not been added yet &mdash; dashed cells show the expected file name under <code>static/audio/&lt;System&gt;/</code>.</p>
+        <div class="content has-text-justified" style="max-width: 1000px; margin: 0 auto;">
+          <table class="table is-bordered is-narrow is-hoverable is-fullwidth audio-table">
+            <thead>
+              <br>
+              <tr>
+                <th>Caption</th>
+                <th>TinyAudio (Ours)<br>25 steps</th>
+                <th>TinyAudio-MF (Ours)<br>1 step</th>
+                <th>MeanAudio-L-Full<br>480M, 25 steps</th>
+                <th>TangoFlux<br>516M, 50 steps</th>
+                <th>GT</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A distant church bell tolls slowly, then a flock of pigeons takes flight.</td>
+                <td data-file="01.wav"><audio controls preload="metadata" src="static/audio/TinyAudio/01.wav"></audio></td>
+                <td data-file="01.wav"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/01.wav"></audio></td>
+                <td data-file="01.wav"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/01.wav"></audio></td>
+                <td data-file="01.wav"><audio controls preload="metadata" src="static/audio/TangoFlux/01.wav"></audio></td>
+                <td data-file="01.wav"><audio controls preload="metadata" src="static/audio/GT/01.wav"></audio></td>
+              </tr>
+              <tr>
+                <td>Heavy rain drumming on a metal roof while thunder rolls in the distance.</td>
+                <td data-file="02.wav"><audio controls preload="metadata" src="static/audio/TinyAudio/02.wav"></audio></td>
+                <td data-file="02.wav"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/02.wav"></audio></td>
+                <td data-file="02.wav"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/02.wav"></audio></td>
+                <td data-file="02.wav"><audio controls preload="metadata" src="static/audio/TangoFlux/02.wav"></audio></td>
+                <td data-file="02.wav"><audio controls preload="metadata" src="static/audio/GT/02.wav"></audio></td>
+              </tr>
+              <tr>
+                <td>A car door slams shut, the engine turns over, and tires screech away.</td>
+                <td data-file="03.wav"><audio controls preload="metadata" src="static/audio/TinyAudio/03.wav"></audio></td>
+                <td data-file="03.wav"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/03.wav"></audio></td>
+                <td data-file="03.wav"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/03.wav"></audio></td>
+                <td data-file="03.wav"><audio controls preload="metadata" src="static/audio/TangoFlux/03.wav"></audio></td>
+                <td data-file="03.wav"><audio controls preload="metadata" src="static/audio/GT/03.wav"></audio></td>
+              </tr>
+              <tr>
+                <td>Simultaneous chatter, laughter, and clinking glass fill a crowded cafe.</td>
+                <td data-file="04.wav"><audio controls preload="metadata" src="static/audio/TinyAudio/04.wav"></audio></td>
+                <td data-file="04.wav"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/04.wav"></audio></td>
+                <td data-file="04.wav"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/04.wav"></audio></td>
+                <td data-file="04.wav"><audio controls preload="metadata" src="static/audio/TangoFlux/04.wav"></audio></td>
+                <td data-file="04.wav"><audio controls preload="metadata" src="static/audio/GT/04.wav"></audio></td>
+              </tr>
+              <tr>
+                <td>A wooden chair scrapes across the floor, followed by footsteps and a door creaking open.</td>
+                <td data-file="05.wav"><audio controls preload="metadata" src="static/audio/TinyAudio/05.wav"></audio></td>
+                <td data-file="05.wav"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/05.wav"></audio></td>
+                <td data-file="05.wav"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/05.wav"></audio></td>
+                <td data-file="05.wav"><audio controls preload="metadata" src="static/audio/TangoFlux/05.wav"></audio></td>
+                <td data-file="05.wav"><audio controls preload="metadata" src="static/audio/GT/05.wav"></audio></td>
+              </tr>
+              <tr>
+                <td>First the sharp hiss of a spray can, then the mellow strum of an acoustic guitar.</td>
+                <td data-file="06.wav"><audio controls preload="metadata" src="static/audio/TinyAudio/06.wav"></audio></td>
+                <td data-file="06.wav"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/06.wav"></audio></td>
+                <td data-file="06.wav"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/06.wav"></audio></td>
+                <td data-file="06.wav"><audio controls preload="metadata" src="static/audio/TangoFlux/06.wav"></audio></td>
+                <td data-file="06.wav"><audio controls preload="metadata" src="static/audio/GT/06.wav"></audio></td>
+              </tr>
+              <tr>
+                <td>A dog barks twice in the distance as bees buzz around a nearby hive.</td>
+                <td data-file="07.wav"><audio controls preload="metadata" src="static/audio/TinyAudio/07.wav"></audio></td>
+                <td data-file="07.wav"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/07.wav"></audio></td>
+                <td data-file="07.wav"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/07.wav"></audio></td>
+                <td data-file="07.wav"><audio controls preload="metadata" src="static/audio/TangoFlux/07.wav"></audio></td>
+                <td data-file="07.wav"><audio controls preload="metadata" src="static/audio/GT/07.wav"></audio></td>
+              </tr>
+              <tr>
+                <td>Crackling firewood with a kettle whistling softly in the background.</td>
+                <td data-file="08.wav"><audio controls preload="metadata" src="static/audio/TinyAudio/08.wav"></audio></td>
+                <td data-file="08.wav"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/08.wav"></audio></td>
+                <td data-file="08.wav"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/08.wav"></audio></td>
+                <td data-file="08.wav"><audio controls preload="metadata" src="static/audio/TangoFlux/08.wav"></audio></td>
+                <td data-file="08.wav"><audio controls preload="metadata" src="static/audio/GT/08.wav"></audio></td>
+              </tr>
+              <tr>
+                <td>Typing on a mechanical keyboard, paper rustling, and a wall clock ticking in a quiet office.</td>
+                <td data-file="09.wav"><audio controls preload="metadata" src="static/audio/TinyAudio/09.wav"></audio></td>
+                <td data-file="09.wav"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/09.wav"></audio></td>
+                <td data-file="09.wav"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/09.wav"></audio></td>
+                <td data-file="09.wav"><audio controls preload="metadata" src="static/audio/TangoFlux/09.wav"></audio></td>
+                <td data-file="09.wav"><audio controls preload="metadata" src="static/audio/GT/09.wav"></audio></td>
+              </tr>
+              <tr>
+                <td>A few seconds of silence, then a single glass shatters on a hard floor.</td>
+                <td data-file="10.wav"><audio controls preload="metadata" src="static/audio/TinyAudio/10.wav"></audio></td>
+                <td data-file="10.wav"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/10.wav"></audio></td>
+                <td data-file="10.wav"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/10.wav"></audio></td>
+                <td data-file="10.wav"><audio controls preload="metadata" src="static/audio/TangoFlux/10.wav"></audio></td>
+                <td data-file="10.wav"><audio controls preload="metadata" src="static/audio/GT/10.wav"></audio></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+<!-- End audio samples -->
 
-<section id="samples">
-  <h2>Audio samples</h2>
-  <div class="slot"><b>01</b><em>assets/audio/01.mp3 &mdash; not added yet</em></div>
-  <div class="slot"><b>02</b><em>assets/audio/02.mp3 &mdash; not added yet</em></div>
-  <div class="slot"><b>03</b><em>assets/audio/03.mp3 &mdash; not added yet</em></div>
+
+<!-- Overall architecture -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3" style="text-align: center; margin-bottom: 1rem; margin-left: 0; margin-right: 0">
+        <br>
+        Overall Architecture</h2>
+      <p>
+        <div class="content has-text-justified" style="margin: 0 0px;">
+          <br>
+          TA-DiT is TinyAudio's compact generative backbone. It removes two sources of repeated parameters in
+          text-conditioned generative Transformers: separate modality-fusion modules and block-specific conditional
+          modulation networks. Projected text tokens and noised audio latents are concatenated for joint self-attention,
+          with independently indexed rotary position embeddings preserving the positional structure of each modality;
+          only audio tokens predict latent velocity. Instead of a per-block AdaLN network, the shift&ndash;scale and
+          gating MLPs are shared across all Transformer blocks, with lightweight block-specific embeddings preserving
+          depth-dependent behavior. A single 18-block stream with hidden size 384 and 8 attention heads yields a 35M
+          generator.
+        </div>
+      </p>
+      <div style="width: 100%; height: auto; margin: 0 auto;">
+        <br>
+        <img src="static/images/fig2_architecture.png" alt="Single-stream TA-DiT architecture" style="width: 100%; height: auto;">
+      </div>
+
+    </div>
+  </div>
 </section>
+<!-- End overall architecture -->
 
-<section>
-  <h2>Citation</h2>
-<pre>@inproceedings{tinyaudio2026,
-  title     = {TinyAudio},
-  author    = {Author One and Author Two},
-  booktitle = {ICASSP},
-  year      = {2026}
-}</pre>
+
+<!-- Main results -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3" style="text-align: center; margin-bottom: 1rem; margin-left: 0; margin-right: 0">
+        <br>
+        Main Results</h2>
+      <p>
+        <div class="content has-text-justified" style="margin: 0 0px;">
+          <br>
+          TinyAudio attains an AudioCaps FAD of 2.65 with 0.48&nbsp;GB of peak GPU memory, more than 8&times; less than
+          every compared system, and remains competitive in CU and PQ on TTA-Bench. TinyAudio-MF cuts sampling to a
+          single function evaluation at a measurable quality trade-off.
+        </div>
+      </p>
+
+      <div class="results-wrap">
+        <table class="results-table">
+          <thead>
+            <tr>
+              <th rowspan="2">Model</th>
+              <th colspan="5">Footprint / Efficiency</th>
+              <th colspan="4">AudioCaps</th>
+              <th colspan="5">TTA-Bench</th>
+            </tr>
+            <tr>
+              <th>Gen.</th>
+              <th>Deploy.</th>
+              <th>Mem.</th>
+              <th>NFE</th>
+              <th>RTF</th>
+              <th>FAD&darr;</th>
+              <th>FD&darr;</th>
+              <th>KL&darr;</th>
+              <th>IS&uarr;</th>
+              <th>CE&uarr;</th>
+              <th>CU&uarr;</th>
+              <th>PC&uarr;</th>
+              <th>PQ&uarr;</th>
+              <th>CLAP&uarr;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>AudioLDM-L-Full</td>
+              <td>739M</td><td>953M</td><td>3.89 GB</td><td>200&times;2</td><td>1.190</td>
+              <td>4.32</td><td>29.50</td><td>1.68</td><td>8.17</td>
+              <td>3.275</td><td>5.137</td><td>3.219</td><td>5.854</td><td>0.441</td>
+            </tr>
+            <tr>
+              <td>AudioLDM2-Large</td>
+              <td>718M</td><td>1467M</td><td>5.93 GB</td><td>200&times;2</td><td>4.173</td>
+              <td>3.45</td><td>25.53</td><td>1.65</td><td>7.98</td>
+              <td>3.441</td><td><span class="best">5.440</span></td><td>2.957</td><td>5.984</td><td>0.415</td>
+            </tr>
+            <tr>
+              <td>Tango-Full</td>
+              <td>866M</td><td>1295M</td><td>5.28 GB</td><td>200&times;2</td><td>1.880</td>
+              <td>2.68</td><td>15.64</td><td>1.24</td><td>8.78</td>
+              <td>3.264</td><td>5.151</td><td>3.360</td><td>5.954</td><td>0.440</td>
+            </tr>
+            <tr>
+              <td>Tango-2-Full</td>
+              <td>866M</td><td>1295M</td><td>5.28 GB</td><td>200&times;2</td><td>1.879</td>
+              <td>2.87</td><td>15.93</td><td><span class="best">1.20</span></td><td>10.05</td>
+              <td>3.468</td><td>5.196</td><td><span class="best">3.800</span></td><td>5.895</td><td>0.467</td>
+            </tr>
+            <tr>
+              <td>MeanAudio-L-Full</td>
+              <td>480M</td><td>1032M</td><td>4.79 GB</td><td>25</td><td><span class="second">0.057</span></td>
+              <td>2.59</td><td><span class="best">14.06</span></td><td><span class="second">1.21</span></td><td><span class="second">12.46</span></td>
+              <td>3.304</td><td>5.151</td><td>2.995</td><td>5.743</td><td>0.469</td>
+            </tr>
+            <tr>
+              <td>EzAudio-XL</td>
+              <td>857M</td><td>2120M</td><td>8.61 GB</td><td>200&times;2</td><td>1.896</td>
+              <td>3.64</td><td>14.98</td><td>1.29</td><td>11.38</td>
+              <td>3.388</td><td>5.055</td><td>3.663</td><td>5.719</td><td>0.446</td>
+            </tr>
+            <tr>
+              <td>GenAU-L-Full</td>
+              <td>1253M</td><td>2031M</td><td>18.54 GB</td><td>200&times;2</td><td>0.937</td>
+              <td><span class="best">2.07</span></td><td><span class="second">14.58</span></td><td>1.36</td><td>10.43</td>
+              <td>3.359</td><td>5.096</td><td>3.584</td><td>5.802</td><td>0.468</td>
+            </tr>
+            <tr>
+              <td>TangoFlux</td>
+              <td>516M</td><td><span class="second">937M</span></td><td>6.99 GB</td><td>50&times;2</td><td>0.257</td>
+              <td>2.41</td><td>20.65</td><td>1.27</td><td><span class="best">12.81</span></td>
+              <td><span class="best">3.539</span></td><td>5.074</td><td><span class="second">3.673</span></td><td>5.782</td><td><span class="second">0.472</span></td>
+            </tr>
+            <tr>
+              <td>Resonate</td>
+              <td><span class="second">470M</span></td><td>1108M</td><td>5.13 GB</td><td>25&times;2</td><td>0.273</td>
+              <td><span class="second">2.27</span></td><td>15.53</td><td>1.31</td><td>10.79</td>
+              <td>3.451</td><td><span class="second">5.328</span></td><td>3.232</td><td><span class="best">6.064</span></td><td><span class="best">0.476</span></td>
+            </tr>
+            <tr class="ours">
+              <td>TinyAudio</td>
+              <td><span class="best">35M</span></td><td><span class="best">87M</span></td><td><span class="best">0.48 GB</span></td><td>25&times;2</td><td>0.078</td>
+              <td>2.65</td><td>18.24</td><td>1.32</td><td>10.44</td>
+              <td>3.343</td><td>5.262</td><td>2.983</td><td><span class="second">5.996</span></td><td>0.429</td>
+            </tr>
+            <tr class="ours">
+              <td>TinyAudio-MF</td>
+              <td><span class="best">35M</span></td><td><span class="best">87M</span></td><td><span class="best">0.48 GB</span></td><td>1</td><td><span class="best">0.010</span></td>
+              <td>2.83</td><td>23.65</td><td>1.49</td><td>8.47</td>
+              <td>3.350</td><td>5.257</td><td>3.043</td><td>5.994</td><td>0.403</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="results-note">
+        <strong>Bold</strong> and <span style="text-decoration: underline;">underline</span> indicate best and second-best results.
+        Mem. and RTF are measured on a single GPU in FP32 with batch size 1. TTA-Bench results use the Accuracy subset.
+      </p>
+
+    </div>
+  </div>
 </section>
+<!-- End main results -->
 
-<footer>
-  Page built from a plain HTML template. Last updated 2026-09-11.
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 
-</div>
-</body>
-</html>
+
+<script>
+// 音频占位：文件不存在时把播放器换成虚线文件名占位块
+document.addEventListener('DOMContentLoaded', function () {
+  function markPlaceholder(td) {
+    td.classList.add('is-placeholder');
+  }
+  document.querySelectorAll('.audio-table td[data-file]').forEach(function (td) {
+    var audio = td.querySelector('audio');
+    if (!audio) { markPlaceholder(td); return; }
+    audio.addEventListener('error', function () { markPlaceholder(td); });
+    // 主动探测，避免 preload 策略差异导致 error 不触发
+    fetch(audio.getAttribute('src'), { method: 'HEAD' })
+      .then(function (res) { if (!res.ok) { markPlaceholder(td); } })
+      .catch(function () { markPlaceholder(td); });
+  });
+});
+</script>
+
+  </body>
+  </html>
