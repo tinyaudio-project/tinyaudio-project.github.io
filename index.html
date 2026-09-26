@@ -32,73 +32,6 @@
   <link rel="stylesheet" href="static/css/index.css" data-page-node-id="AFMIajRDhPMJfwWnW37Q7x">
 
   <style>
-    .audio-table {
-      font-size: 0.9rem;
-      margin-bottom: 2rem;
-      border-collapse: collapse;
-    }
-    .audio-table th,
-    .audio-table td {
-      border-left: none !important;
-      border-right: none !important;
-    }
-    .audio-table th:not(:first-child),
-    .audio-table td:not(:first-child) {
-      border-left: none !important;
-    }
-    .audio-table.is-bordered th,
-    .audio-table.is-bordered td {
-      border-left: none !important;
-      border-right: none !important;
-    }
-    .audio-table th {
-      text-align: center !important;
-      vertical-align: middle;
-      background-color: #f5f5f5;
-      font-weight: bold;
-      font-size: 0.85rem;
-      white-space: nowrap;
-    }
-    .audio-table td:first-child {
-      text-align: left;
-      vertical-align: middle;
-      width: 30%;
-      font-size: 0.85rem;
-      line-height: 1.4;
-      padding-left: 15px;
-    }
-    .audio-table td:not(:first-child) {
-      text-align: center;
-      vertical-align: middle;
-      width: 14%;
-    }
-    .audio-table audio {
-      width: 100%;
-      height: 30px;
-      max-width: 150px;
-    }
-    .audio-table tbody tr {
-      background-color: #f5f5f5 !important;
-    }
-    .audio-table tbody tr:hover {
-      background-color: #f0f8ff !important;
-    }
-
-    /* 音频占位：文件缺失时隐藏播放器，改显示期望文件名 */
-    .audio-table td.is-placeholder audio { display: none; }
-    .audio-table td.is-placeholder::after {
-      content: attr(data-file);
-      display: block;
-      border: 1px dashed #d5d5d5;
-      border-radius: 4px;
-      padding: 7px 4px;
-      background: #fbfbfb;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 0.66rem;
-      line-height: 1.3;
-      color: #a8a8a8;
-      word-break: break-all;
-    }
 
     /* 主结果表格 */
     .results-wrap { overflow-x: auto; margin: 0 auto 2rem; }
@@ -179,12 +112,6 @@
                     <span data-page-node-id="V90YVPTwl316Urn7aLY1RW">Code</span>
                   </a>
                 </span>
-                <span class="link-block" data-page-node-id="1sR9eX0ZifzV8HFxwd6O3o">
-                  <a href="#samples" class="external-link button is-normal is-rounded is-dark" data-page-node-id="AsEEmiLT0SkBu3FgEgOzVZ">
-                    <span class="icon" data-page-node-id="e2BzQGgLGRR9thgzhemTCo"><i class="fas fa-headphones" data-page-node-id="eHGiNMyFEsPLrlnqGDZTL5"></i></span>
-                    <span data-page-node-id="CZr2VgjuyEPV5Nq0LMlfNa">Audio samples</span>
-                  </a>
-                </span>
               </div>
             </div>
 
@@ -222,117 +149,6 @@
 </section>
 <!-- End overall performance -->
 
-
-<!-- Audio samples -->
-<section class="section hero is-light" id="samples" data-page-node-id="IjjXWe0raD8Yt4oLU2lDzB">
-  <div class="container" data-page-node-id="aldNiYOHCABar1vbcbDIgG">
-    <div class="columns is-centered has-text-centered" data-page-node-id="J3HbJCJrxnb2TRkrPVjVAC">
-      <div class="column is-fullwidth" data-page-node-id="YoxvW8CktVDj1Za49gMgBT">
-        <h2 class="title is-3" data-page-node-id="bCVfhVPPjzvSW9iLmAP1RS">Audio Generation Samples</h2>
-        <br data-page-node-id="eIt561cfK632Tp9ACGJJEg">
-        <p class="ph-note" data-page-node-id="NUxK8suutHkzdNEe2m7Ncp">Audio files have not been added yet &mdash; dashed cells show the expected file name under <code data-page-node-id="MSSqpcIlqfVeczEZuiaYwe">static/audio/&lt;System&gt;/</code>.</p>
-        <div class="content has-text-justified" style="max-width: 1000px; margin: 0 auto;" data-page-node-id="u1VXONwm2i2xY4aH9EGTCI">
-          <table class="table is-bordered is-narrow is-hoverable is-fullwidth audio-table" data-page-node-id="E2pIzzeHopQFqqq6amtXH6">
-            <thead data-page-node-id="FwJ2RqNsgbZBPafZxiLvU7">
-              <br data-page-node-id="sGK6oM5z9PHjWWl0MBdvRg">
-              <tr data-page-node-id="lnGJpYfKNTtH3obyFpqpph">
-                <th data-page-node-id="tbjZk812ZHvBIkC0Zb0qrB">Caption</th>
-                <th data-page-node-id="Wy3yYTdmrl3qpcH8NNuikX">TinyAudio (Ours)<br data-page-node-id="1ZgD3R7Bzd303hvF3rSeYg">25 steps</th>
-                <th data-page-node-id="9JG25wk5RuwqUKjVnqejzt">TinyAudio-MF (Ours)<br data-page-node-id="8xKmfYNb09OX8DBj16L2Ow">1 step</th>
-                <th data-page-node-id="7jtnvGDaJuHXVSirmS1CG3">MeanAudio-L-Full<br data-page-node-id="dAX11vWWVlXv8CF6U3l9Bn">480M, 25 steps</th>
-                <th data-page-node-id="QJKnOGw5bOGhGSdiKvpsE5">TangoFlux<br data-page-node-id="bh04oUNNYeyiMRx0a3XrWA">516M, 50 steps</th>
-                <th data-page-node-id="6IWSiE7otiMYK0LS1WGjLL">GT</th>
-              </tr>
-            </thead>
-            <tbody data-page-node-id="0KSDaECOnb2w32HDbShz7Z">
-              <tr data-page-node-id="Pg0cmkvcrdUR3ZKmbBqsb3">
-                <td data-page-node-id="PHoe4lFoDASr4gOQqiGbUp">A distant church bell tolls slowly, then a flock of pigeons takes flight.</td>
-                <td data-file="01.wav" data-page-node-id="CFa7dEmO4zQrar7CxAmD26"><audio controls preload="metadata" src="static/audio/TinyAudio/01.wav" data-page-node-id="69RNEYogwlvGe0ZR3diNpF"></audio></td>
-                <td data-file="01.wav" data-page-node-id="7EKcppIv2LQBVBYZYOCDCI"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/01.wav" data-page-node-id="zFX61RNkEQNtdAyi0TapqU"></audio></td>
-                <td data-file="01.wav" data-page-node-id="WnHJrQKBSs8nkaoAA843DW"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/01.wav" data-page-node-id="eCBG82YysKemk7Zw2611uP"></audio></td>
-                <td data-file="01.wav" data-page-node-id="etpSCGTcaYvlYzHP2kHsEh"><audio controls preload="metadata" src="static/audio/TangoFlux/01.wav" data-page-node-id="33iiOs4RMucjVQ5BHfUNeW"></audio></td>
-                <td data-file="01.wav" data-page-node-id="3GqvbMed3VDA7sJwXSEtoO"><audio controls preload="metadata" src="static/audio/GT/01.wav" data-page-node-id="WxX2v3YgghGYWCyFnqHVqM"></audio></td>
-              </tr>
-              <tr data-page-node-id="2ARLhowoZEDlJDSyqELuSH">
-                <td data-page-node-id="9NGqZ9wvotcrihAPQQvULa">Heavy rain drumming on a metal roof while thunder rolls in the distance.</td>
-                <td data-file="02.wav" data-page-node-id="F7BXbeCcEOxN8YSw7gE4Lq"><audio controls preload="metadata" src="static/audio/TinyAudio/02.wav" data-page-node-id="4JC7ym9orkbEwMfUAq5TWt"></audio></td>
-                <td data-file="02.wav" data-page-node-id="lS76vfc2ywJSWv2Hqc4k3Y"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/02.wav" data-page-node-id="CDIEL9VKl8Bi1STluaEEY8"></audio></td>
-                <td data-file="02.wav" data-page-node-id="B5GIoEI8v72MnlFHK2Y2mE"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/02.wav" data-page-node-id="IKKFtRYFgJmt3OyXqGA0V0"></audio></td>
-                <td data-file="02.wav" data-page-node-id="kQxiGW2gcqhDJ2BcMIafeD"><audio controls preload="metadata" src="static/audio/TangoFlux/02.wav" data-page-node-id="UUrAOG8U3LqLeXrRIZUYFe"></audio></td>
-                <td data-file="02.wav" data-page-node-id="thVRbrUOB1Yz6Oh3PLv0D6"><audio controls preload="metadata" src="static/audio/GT/02.wav" data-page-node-id="1e91RyyepEU74yiMsf9OuG"></audio></td>
-              </tr>
-              <tr data-page-node-id="1F5077CjNBOWefC6Eof3XD">
-                <td data-page-node-id="unIUBcOW3ir2WgL3gWSQ8B">A car door slams shut, the engine turns over, and tires screech away.</td>
-                <td data-file="03.wav" data-page-node-id="HaQXg4yVdIc6kGJ4X8m5tM"><audio controls preload="metadata" src="static/audio/TinyAudio/03.wav" data-page-node-id="xpCzJD4aZj4i8V2tBs90xG"></audio></td>
-                <td data-file="03.wav" data-page-node-id="KQjwHVE8TvB7UPRk3M6RUH"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/03.wav" data-page-node-id="kqhpk1qW8PigXWXZR54Aw9"></audio></td>
-                <td data-file="03.wav" data-page-node-id="MAKsQCDO0PIg2lWwUTaQiP"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/03.wav" data-page-node-id="5wFSRXXVzGdD0D6awRmrwC"></audio></td>
-                <td data-file="03.wav" data-page-node-id="pR6RV5XTwwIuWIeYFYbsuh"><audio controls preload="metadata" src="static/audio/TangoFlux/03.wav" data-page-node-id="X1w4MQPhDKr1V0PFBbrbnV"></audio></td>
-                <td data-file="03.wav" data-page-node-id="MrKpYED26yz1GITs6EeqHN"><audio controls preload="metadata" src="static/audio/GT/03.wav" data-page-node-id="YYGPY6xwst4DlFBceTKxjL"></audio></td>
-              </tr>
-              <tr data-page-node-id="6Ln0KaIvPcrIs3bfJGln35">
-                <td data-page-node-id="6hGNJGItxb1PCbgjILVw1H">Simultaneous chatter, laughter, and clinking glass fill a crowded cafe.</td>
-                <td data-file="04.wav" data-page-node-id="k2VhsDD9WIavEU4kBneWxQ"><audio controls preload="metadata" src="static/audio/TinyAudio/04.wav" data-page-node-id="6SjeQ0SGAzQJmK1njxyHWX"></audio></td>
-                <td data-file="04.wav" data-page-node-id="QNbMdZAFoGDPxpKco2EjQ0"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/04.wav" data-page-node-id="PrlMfFXam8XTsrBicHZU1r"></audio></td>
-                <td data-file="04.wav" data-page-node-id="pFfr6M3X7P4cRfDUOyMFf3"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/04.wav" data-page-node-id="YsE0aln648Z1enmwUKCMRT"></audio></td>
-                <td data-file="04.wav" data-page-node-id="fxAempOGC1yyNCFfQxZFGt"><audio controls preload="metadata" src="static/audio/TangoFlux/04.wav" data-page-node-id="zcCaHeChlATHG21x7gTSmg"></audio></td>
-                <td data-file="04.wav" data-page-node-id="6OB8RLPU6ASVTqvbUM2Kuz"><audio controls preload="metadata" src="static/audio/GT/04.wav" data-page-node-id="uBw71RDBrQEXstsxsv5XfU"></audio></td>
-              </tr>
-              <tr data-page-node-id="L9AkrtvFVqpRQf5Qs4JJQu">
-                <td data-page-node-id="ENLDK3JMooJFGwAL4xejcp">A wooden chair scrapes across the floor, followed by footsteps and a door creaking open.</td>
-                <td data-file="05.wav" data-page-node-id="RAiXzzLrJLx8S18K9vPFBh"><audio controls preload="metadata" src="static/audio/TinyAudio/05.wav" data-page-node-id="V0Sk8QyUMndp4NuwMVp603"></audio></td>
-                <td data-file="05.wav" data-page-node-id="YaI36PppHba7ZB9FJ9aXSQ"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/05.wav" data-page-node-id="V3eWfvJS8Q0XNxOOfqvQNh"></audio></td>
-                <td data-file="05.wav" data-page-node-id="KpmgqJ5qQ0iwjW5dJBXjEX"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/05.wav" data-page-node-id="L6yjRdXx7QixmaLHiobYpc"></audio></td>
-                <td data-file="05.wav" data-page-node-id="3Qvuf9kPb4vyUCrrFsfQrw"><audio controls preload="metadata" src="static/audio/TangoFlux/05.wav" data-page-node-id="uveipVpdwwWtadleJlsKVQ"></audio></td>
-                <td data-file="05.wav" data-page-node-id="vuEJDCpQ6aXnL9yNE35DlT"><audio controls preload="metadata" src="static/audio/GT/05.wav" data-page-node-id="rAkndJYAxiurRuFM1SAldQ"></audio></td>
-              </tr>
-              <tr data-page-node-id="Ljoc3fvxo2VX92IFUANvy1">
-                <td data-page-node-id="Xxy1XkblZzq7AsrADVCnxj">First the sharp hiss of a spray can, then the mellow strum of an acoustic guitar.</td>
-                <td data-file="06.wav" data-page-node-id="PBouHKFBHZJnAOYAtqsOEk"><audio controls preload="metadata" src="static/audio/TinyAudio/06.wav" data-page-node-id="HvbXpo4C8bUzEBwSEaW2qE"></audio></td>
-                <td data-file="06.wav" data-page-node-id="hUp6MFmW8dDtxOx9uaTjMf"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/06.wav" data-page-node-id="JoQ2PheUaG6zMpZZuCBRWz"></audio></td>
-                <td data-file="06.wav" data-page-node-id="e3Ay1cT7it9d98us6gzjoS"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/06.wav" data-page-node-id="9IKLQPPmJOuBwL5AJgauPU"></audio></td>
-                <td data-file="06.wav" data-page-node-id="yAEdfWTyRrHGtAFcr1Ctap"><audio controls preload="metadata" src="static/audio/TangoFlux/06.wav" data-page-node-id="RjJccaVVBcpwIy4EYIyZ2j"></audio></td>
-                <td data-file="06.wav" data-page-node-id="dIwozihWXYqk6XCAMnzoRE"><audio controls preload="metadata" src="static/audio/GT/06.wav" data-page-node-id="STirtEzbgMNWGneG47xBXw"></audio></td>
-              </tr>
-              <tr data-page-node-id="zl8Z3LpKklWyS50yGHdw5I">
-                <td data-page-node-id="raXC4pFn0EHKfIfvLdEwgy">A dog barks twice in the distance as bees buzz around a nearby hive.</td>
-                <td data-file="07.wav" data-page-node-id="tsn4DaiPEA2Hf5jFug26O4"><audio controls preload="metadata" src="static/audio/TinyAudio/07.wav" data-page-node-id="VasXIVNLGDJZBk9NnZrst8"></audio></td>
-                <td data-file="07.wav" data-page-node-id="mOrXKkrAAe3e2Lb7gm5mrB"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/07.wav" data-page-node-id="U1pkTRFbGFZQoRE2CVM4ad"></audio></td>
-                <td data-file="07.wav" data-page-node-id="vwXJBqRPMOGBuL5hsSx8Mj"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/07.wav" data-page-node-id="kK563KqGYytb78aVZjrMiZ"></audio></td>
-                <td data-file="07.wav" data-page-node-id="TJoh43SV5BE1dTbtBfb1q0"><audio controls preload="metadata" src="static/audio/TangoFlux/07.wav" data-page-node-id="Xi7pkT5bKcVZBXr6iRL0yd"></audio></td>
-                <td data-file="07.wav" data-page-node-id="OLeQ5jlNTVvdMdHiUWc2hL"><audio controls preload="metadata" src="static/audio/GT/07.wav" data-page-node-id="MRHqc5OzGV1Mx8H7PW9lBf"></audio></td>
-              </tr>
-              <tr data-page-node-id="6dJginbU4tcym3xKNACbyi">
-                <td data-page-node-id="dPMcYT5lnZejqfUFg1Bkjy">Crackling firewood with a kettle whistling softly in the background.</td>
-                <td data-file="08.wav" data-page-node-id="xsnsUvYjung6SQBRc9LVZl"><audio controls preload="metadata" src="static/audio/TinyAudio/08.wav" data-page-node-id="pQH3YJsTDng01gOB0R0LRj"></audio></td>
-                <td data-file="08.wav" data-page-node-id="WjY7JAuSQ6ljLtQQiEWAr5"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/08.wav" data-page-node-id="XUvPDSq2KBrN6IjP5uHEEY"></audio></td>
-                <td data-file="08.wav" data-page-node-id="CwGbF4iyvLzREJKn5fXkWU"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/08.wav" data-page-node-id="YLLATqat6dCcoNG9mCfSFo"></audio></td>
-                <td data-file="08.wav" data-page-node-id="u3pDm2TzLtOo2kaF63KqjT"><audio controls preload="metadata" src="static/audio/TangoFlux/08.wav" data-page-node-id="0GUegN4gIGW9HmEBjHZLz0"></audio></td>
-                <td data-file="08.wav" data-page-node-id="pf7AUnLqR2Z34rA0QKzou2"><audio controls preload="metadata" src="static/audio/GT/08.wav" data-page-node-id="XSEtxVyeb3aYEiniK26VqF"></audio></td>
-              </tr>
-              <tr data-page-node-id="lTGzllF6eKjWxOGpEGsIZv">
-                <td data-page-node-id="GHgVVpOlKMnUiMUnZppHER">Typing on a mechanical keyboard, paper rustling, and a wall clock ticking in a quiet office.</td>
-                <td data-file="09.wav" data-page-node-id="NO9IKM0EThbHiHBFdtaLWW"><audio controls preload="metadata" src="static/audio/TinyAudio/09.wav" data-page-node-id="3Y0DhPOfJ4CUNx9ODlxymv"></audio></td>
-                <td data-file="09.wav" data-page-node-id="3k5PXR61t8NpDYMqCiBmrl"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/09.wav" data-page-node-id="ws4JUdDBhRGcW6EyDduEH7"></audio></td>
-                <td data-file="09.wav" data-page-node-id="Mia1BlEsHmEDtckNFqwLy5"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/09.wav" data-page-node-id="DWJH4IXLSByPy6SZRmpgsg"></audio></td>
-                <td data-file="09.wav" data-page-node-id="ocEv5MgYmU3UisrsfbfrO1"><audio controls preload="metadata" src="static/audio/TangoFlux/09.wav" data-page-node-id="fUlmNYU9xYTJ7okNH4duMf"></audio></td>
-                <td data-file="09.wav" data-page-node-id="H0svFYeDe8SXE3vylg37FB"><audio controls preload="metadata" src="static/audio/GT/09.wav" data-page-node-id="JSl4YcwHsgNtWvMuFwpAqA"></audio></td>
-              </tr>
-              <tr data-page-node-id="J045xsBKehjvWKtVcdgJ31">
-                <td data-page-node-id="lVCRH5i0jZX8VVUzJeQNuw">A few seconds of silence, then a single glass shatters on a hard floor.</td>
-                <td data-file="10.wav" data-page-node-id="DbPdkURqEIij2vzHCihmlv"><audio controls preload="metadata" src="static/audio/TinyAudio/10.wav" data-page-node-id="LCgEyCuVDJCBBh5rwCwIi4"></audio></td>
-                <td data-file="10.wav" data-page-node-id="vVEExjtjCpEzBicOtiZWTb"><audio controls preload="metadata" src="static/audio/TinyAudio-MF/10.wav" data-page-node-id="4cW4PSNOncR3xBa3QtGkt5"></audio></td>
-                <td data-file="10.wav" data-page-node-id="rmEzDkATfoObd0xaQXTttd"><audio controls preload="metadata" src="static/audio/MeanAudio-L-Full/10.wav" data-page-node-id="ke2Y5IfiEKRj8HfFJWPUN8"></audio></td>
-                <td data-file="10.wav" data-page-node-id="dVv0wPyJpYgHf9mzl5VDUR"><audio controls preload="metadata" src="static/audio/TangoFlux/10.wav" data-page-node-id="6BTYDi60RTOZMjDqKOVBFJ"></audio></td>
-                <td data-file="10.wav" data-page-node-id="XPdoo0NflqGOe67W2EpOJW"><audio controls preload="metadata" src="static/audio/GT/10.wav" data-page-node-id="nvrMDVFfpdShEMWCQrz75H"></audio></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End audio samples -->
 
 
 <!-- Overall architecture -->
@@ -506,23 +322,6 @@
 </footer>
 
 
-<script>
-// 音频占位：文件不存在时把播放器换成虚线文件名占位块
-document.addEventListener('DOMContentLoaded', function () {
-  function markPlaceholder(td) {
-    td.classList.add('is-placeholder');
-  }
-  document.querySelectorAll('.audio-table td[data-file]').forEach(function (td) {
-    var audio = td.querySelector('audio');
-    if (!audio) { markPlaceholder(td); return; }
-    audio.addEventListener('error', function () { markPlaceholder(td); });
-    // 主动探测，避免 preload 策略差异导致 error 不触发
-    fetch(audio.getAttribute('src'), { method: 'HEAD' })
-      .then(function (res) { if (!res.ok) { markPlaceholder(td); } })
-      .catch(function () { markPlaceholder(td); });
-  });
-});
-</script>
 
   </body>
   </html>
